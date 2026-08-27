@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鸣潮商城系统 · 李伟翔 作品集</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<nav class="nav"><div class="nav-in">
+  <span class="brand">Li<span class="dot">·</span>Weixiang</span>
+  <span class="sp"></span>
+  <a class="lnk" href="../index.html">返回总目录</a>
+  <span class="run">在线作品集 · GitHub Pages</span>
+</div></nav>
+<div class="page">
+  <div class="article">
+    <p class="crumb"><a href="../index.html">总目录</a> / 鸣潮商城系统</p>
+    <header class="art-head">
+      <span class="badge b-com">商业化 · 配表</span>
+      <h1>鸣潮商城系统</h1>
+      <p class="art-meta">以上市游戏为背景 · 8种货币 id 唯一 & 术语统一 · 商品/界面/购买流程规则闭环</p>
+      <div class="art-dl"><a class="btn ghost" href="../files/鸣潮商城系统_精修版.xlsx">下载原始文件 xlsx</a></div>
+    </header>
+    <div class="art-body">
+
+      <div class="callout">
+        <b>项目概况：</b> 以上市游戏《鸣潮》为背景的商业化模块配表作业。以「可读配表」形式交付，覆盖商城系统的核心商业化结构：<span class="num-hl">8 张货币配置</span>（id 唯一、统一术语）、两级商品分类、面板界面说明以及购买/显示条件，把「货币 → 商品 → 界面 → 购买流程」串成可推演的闭环。
+      </div>
+
+      <div class="callout">
+        <b>核心亮点：</b> ① 货币 id 全局唯一且版本可追溯（精修中修复了贝币 id 冲突 1006→1008）；② 命名术语统一（如「残振珊瑚」「余波珊瑚」等不作混用）；③ 规则闭环可推演——每种货币有明确来源（充值/抽卡/深塔/全息战略等），每个商品有明确的显示与购买条件。
+      </div>
+
+      <h2>一、开发表</h2>
+      <p>配表版本迭代日志，记录了文档从功能定义到精修的完整过程：</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>版本</th><th>日期</th><th>日志</th></tr></thead>
+        <tbody>
+          <tr><td class="num-hl">v0.0</td><td>2025.9.20</td><td>新建文档，写出功能说明和界面说明</td></tr>
+          <tr><td class="num-hl">v0.1</td><td>2025.10.3</td><td>将部分游戏截图替换为原型图</td></tr>
+          <tr><td class="num-hl">v0.2</td><td>2025.10.8</td><td>增加货币配置表</td></tr>
+          <tr><td class="num-hl">v0.3</td><td>2026.8.27</td><td>精修：修复贝币ID冲突(1006→1008)、统一“残振珊瑚”术语、完善商品价格与界面编号表述</td></tr>
+        </tbody>
+      </table></div>
+      <p>该表体现配表的「可维护性」与「可追溯性」：每次改动的动因、日期、涉及范围都有据可查，为后续需求变更与版本回滚提供依据。</p>
+
+      <h2>二、功能概述</h2>
+      <p><b>设计目的：</b>商城系统是游戏内嵌的核心商业化与资源分发平台，为玩家提供虚拟商品购买，同时支撑游戏多样的运营活动与营收目标。</p>
+      <p><b>功能概述：</b></p>
+      <ol>
+        <li>玩家可以浏览并购买想要的商品</li>
+        <li>对皮肤类商品进行预览</li>
+        <li>玩家可以按商品分类浏览商品</li>
+        <li>可进行配表</li>
+      </ol>
+      <p>功能定位清晰：浏览 / 预览 / 分类 + 可配表，是一个「运营可配置」的商城底座，而非写死的静态页面。</p>
+
+      <h2>三、功能说明</h2>
+      <h3>3.1 功能开启</h3>
+      <ol>
+        <li>在初次进入游戏时自动开启</li>
+        <li>按下 esc 唤出终端（即菜单）后点击商城即可打开</li>
+      </ol>
+      <h3>3.2 功能退出</h3>
+      <p>点击右上角两个退出键可直接退到游戏主界面或者上一级页面。</p>
+      <h3>3.3 商品分类</h3>
+      <p>商品总共分为两级分类：</p>
+      <div class="callout">
+        <b>一级分类：</b> 特别推荐、礼包中心、装扮橱窗、海市兑换、凝刻月相、积分商店
+      </div>
+      <p><b>二级分类</b>按不同一级分类划分如下：</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>一级分类</th><th>二级分类</th></tr></thead>
+        <tbody>
+          <tr><td>特别推荐</td><td>热卖皮肤、月相观测卡（月卡）</td></tr>
+          <tr><td>礼包中心</td><td>特惠专区、常驻礼包、等级礼包</td></tr>
+          <tr><td>装扮橱窗</td><td>服饰橱窗、换影橱窗</td></tr>
+          <tr><td>海市兑换</td><td>余波珊瑚、残振珊瑚、聆听星声</td></tr>
+          <tr><td>凝刻月相</td><td class="mut">（无二级分类）</td></tr>
+          <tr><td>积分商店</td><td>深塔兑换所、演练商店、试炼商店</td></tr>
+        </tbody>
+      </table></div>
+      <h3>3.4 商品显示条件和开启条件</h3>
+      <p>显示条件：所有商品均在进入游戏后可显示。<br>购买条件：某些商品存在购买条件，未满足时无法购买。</p>
+      <div class="callout">
+        <b>存在的购买条件如下：</b><br>
+        · 没有超过能拥有的上限<br>
+        · 等级达标<br>
+        · 拥有角色本体
+      </div>
+      <p>「显示一律可见、购买按条件拦截」的规则设计，让商城既能全量曝光商品做运营，又能在购买侧做硬性校验，是商业化里「视觉全开放 + 购买受控」的常见做法。</p>
+
+      <h2>四、界面说明</h2>
+      <h3>4.1 一级分类区</h3>
+      <ol>
+        <li>点开商城即进入特别推荐页面</li>
+        <li>按照相应的顺序进行分类排列</li>
+        <li>点击可切换对应的商城分类</li>
+      </ol>
+      <h3>4.2 二级分类区</h3>
+      <ol>
+        <li>存在二级分类的页面会显示二级分类</li>
+        <li>若不存在二级分类（如凝刻月相界面）则不显示二级分类，直接显示商品</li>
+      </ol>
+      <p>默认落地页固定为「特别推荐」，且支持按二级分类进一步细化；无二级分类的模块（如凝刻月相）则降级为直接展示商品，做到界面层级与数据层级一一对应。</p>
+
+      <h2>五、货币配置表</h2>
+      <p>核心数据表，定义了商城全部货币。货币类型分四档：<b>（1）高级货币</b>、（2）兑换代币、（3）特殊代币、（4）通用货币，并为每种货币标注了来源路径。</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>id（索引）</th><th>货币名称</th><th>货币类型</th><th>货币来源</th></tr></thead>
+        <tbody>
+          <tr><td class="num-hl">1001</td><td>月相</td><td>1（高级货币）</td><td>充值</td></tr>
+          <tr><td class="num-hl">1002</td><td>星声</td><td>1（高级货币）</td><td>充值；活动；日常任务</td></tr>
+          <tr><td class="num-hl">1003</td><td>余波珊瑚</td><td>2（兑换代币）</td><td>抽卡</td></tr>
+          <tr><td class="num-hl">1004</td><td>残振珊瑚</td><td>2（兑换代币）</td><td>抽卡</td></tr>
+          <tr><td class="num-hl">1005</td><td>深境记录</td><td>3（特殊代币）</td><td>深塔</td></tr>
+          <tr><td class="num-hl">1006</td><td>演练数据集</td><td>3（特殊代币）</td><td>全息战略</td></tr>
+          <tr><td class="num-hl">1007</td><td>试炼纹币</td><td>3（特殊代币）</td><td>全息战略</td></tr>
+          <tr><td class="num-hl">1008</td><td>贝币</td><td>4（通用货币）</td><td>日常探索</td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout">
+        <b>货币体系规则可推演：</b>
+        「月相」（充值得唯）与「星声」为可充值的 <b>高级货币</b>；「余波珊瑚 / 残振珊瑚」是抽卡溢出的兑换代币，可导向「海市兑换」商店；「深境记录、演练数据集、试炼纹币」分别对应深塔与全息战略玩法产出的特殊代币，与「积分商店」下的兑换所 / 演练商店 / 试炼商店一一对应；「贝币」为全游戏通用的日常货币。每个货币 id 全局唯一、术语统一（精修期将原冲突的 1006 更正为 1008「贝币」）。
+      </div>
+      <p>结语：本页完整还原《鸣潮商城系统_精修版.xlsx》的全部工作表，未虚构素材外的货币或数据。货币 → 商品分类 → 界面层级 → 购买条件在配表内相互呼应，构成可验证的商业化闭环。</p>
+
+    </div>
+  </div>
+  <footer><p>在线作品集 · 托管于 GitHub Pages ｜ 鸣潮为库洛游戏作品，本页为求职用商业化系统配表作业</p></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>探洞先锋 · 李伟翔 作品集</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<nav class="nav"><div class="nav-in">
+  <span class="brand">Li<span class="dot">·</span>Weixiang</span>
+  <span class="sp"></span>
+  <a class="lnk" href="../index.html">返回总目录</a>
+  <span class="run">在线作品集 · GitHub Pages</span>
+</div></nav>
+<div class="page">
+  <div class="article">
+    <p class="crumb"><a href="../index.html">总目录</a> / 探洞先锋</p>
+    <header class="art-head">
+      <span class="badge b-sys">系统 · 从0到1</span>
+      <h1>探洞先锋</h1>
+      <p class="art-meta">主策划 · 从核心循环到结算全链路定义玩法 · 13项体力事件表 + 20张技能卡配表</p>
+      <div class="art-dl"><a class="btn ghost" href="../files/探洞先锋游戏设计文档_精修版.docx">下载原始文件 docx</a></div>
+    </header>
+    <div class="art-body">
+
+      <div class="callout"><b>项目定位：</b>《探洞先锋》是一款融合「空间拼图式背包管理」「基于地形的事件驱动探索」与「技能构筑」的策略冒险游戏，强调<b>资源规划、风险评估与信息获取</b>之间的动态平衡。项目重心放在完成「物资配置→探索洞窟→完成任务→获取奖励」的核心循环上，完成后再继续优化其余内容。</div>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>特性</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>玩法定位</td><td>需要玩家合理安排背包资源和道具、探索更深的洞窟、获得更高分数的 2D 策略游戏</td></tr>
+          <tr><td>核心循环</td><td>物资配置 → 探索洞窟 → 完成任务 → 获取奖励，让玩家在有限物资下探索更深的洞窟、获得收获</td></tr>
+          <tr><td>特色机制</td><td>拼图背包管理：玩家需要利用有限的背包格子完成物资管理</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2>一、游戏系统与机制</h2>
+
+      <h3>1. 游戏核心循环</h3>
+      <p>玩家在游戏中先利用有限的背包整备物资，随后进入洞穴探索、消耗体力、触发事件、完成任务和获取奖励。核心循环如下：</p>
+      <div class="callout"><b>整备物资 → 进入洞穴 → 探索触发事件 → 完成任务 → 获取奖励 / 结算。</b>玩家在每个循环阶段都围绕「有限资源下的取舍」做出决策。</div>
+
+      <h3>2. 游戏目标</h3>
+      <ul>
+        <li><b>长期目标</b>：探索更深的洞穴，获取更高的分数。</li>
+        <li><b>短期目标</b>：完成任务、收集资源，进入下一层。</li>
+      </ul>
+
+      <h3>3. 物资整备系统</h3>
+      <p>在进入洞穴探索前，玩家需要准备好自己携带的物资，用于探索洞窟或完成任务。</p>
+      <p><b>初始状态</b>：玩家初始拥有一个 <span class="num-hl">3×3</span> 的背包和 <span class="num-hl">300</span> 金币，需要合理使用这些资源为自己准备探索洞穴的物资。当玩家一切就绪时可以点击进入洞穴开始游戏。</p>
+      <p><b>道具定义</b>：交互说明——鼠标悬停在商品／技能卡上时，会在右侧紫色区域显示详情信息。可购买道具如下：</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>道具名</th><th>功能说明</th><th>使用场景</th><th>占用空间/格</th><th>价格/金币</th><th>备注</th></tr></thead>
+        <tbody>
+          <tr><td>头灯头盔</td><td>防落石</td><td>（必需品）与陡道落石事件</td><td class="num-hl">1</td><td class="num-hl">50</td><td>一盔一带，安全常在。</td></tr>
+          <tr><td>护具</td><td>在匍匐路段保护关节</td><td>窄道匍匐</td><td class="num-hl">2</td><td class="num-hl">50</td><td>至少能让少疼一会儿。</td></tr>
+          <tr><td>手套</td><td>适合攀爬和抓握岩石</td><td>陡道攀爬</td><td class="num-hl">1</td><td class="num-hl">30</td><td>在彻底散架之前受伤的是他。</td></tr>
+          <tr><td>防水布</td><td>应对涉水区域</td><td>水区淌水</td><td class="num-hl">1</td><td class="num-hl">45</td><td>完全防水！——爱来自保护伞护具公司。</td></tr>
+          <tr><td>岩钉</td><td>防脚滑</td><td>下降区、水区脚滑事件</td><td class="num-hl">2</td><td class="num-hl">55</td><td>他很安全，除非你脚滑。</td></tr>
+          <tr><td>绳索</td><td>用于速降</td><td>下降区</td><td class="num-hl">3</td><td class="num-hl">60</td><td>别让它变成绞索。</td></tr>
+          <tr><td>高能量食物与水</td><td>补充体力</td><td>任意时刻（手动使用）</td><td class="num-hl">1</td><td class="num-hl">50</td><td>吃完只想躺平，但是你在洞穴里。</td></tr>
+          <tr><td>地图</td><td>用于收集地块情报</td><td>任意地块</td><td class="num-hl">1</td><td class="num-hl">70</td><td>画得明明白白。至少比摸瞎好。</td></tr>
+          <tr><td>探洞包</td><td>扩展背包格数</td><td>购买生效</td><td class="num-hl">0</td><td class="num-hl">50/格</td><td>装得下装备，装不下后悔，别超载了。</td></tr>
+          <tr><td>上升器</td><td>允许玩家从下降区原路返回</td><td>撤离时</td><td class="num-hl">2</td><td class="num-hl">50</td><td>这叫战略性撤退。</td></tr>
+          <tr><td>急救包</td><td>抵消一次负面体力损失（如落石、卡住）</td><td>任意受伤事件后自动触发</td><td class="num-hl">1</td><td class="num-hl">60</td><td>止血、消毒、固定……</td></tr>
+          <tr><td>便携睡袋</td><td>在休息时额外回复 <span class="num-hl">10</span> 体力</td><td>营地／奇景休息事件</td><td class="num-hl">3</td><td class="num-hl">60</td><td>或许能给你带来一场美好的睡眠。</td></tr>
+          <tr><td>采样工具套件</td><td>用于采样</td><td>采样任务场地</td><td class="num-hl">4</td><td class="num-hl">100</td><td>轻装上阵？不存在的。科研人的命也是命……</td></tr>
+          <tr><td>采样袋</td><td>携带采样所需道具</td><td>任务场地采集后自动使用</td><td class="num-hl">1</td><td class="num-hl">10</td><td>里面装的不是石头，是论文、经费，和你的KPI。</td></tr>
+        </tbody>
+      </table></div>
+      <div class="card-note"><b>背包格示例：</b>初始为 <span class="num-hl">3×3</span>，加上商店购买的两格背包后，生成一个 <span class="num-hl">11</span> 格背包。</div>
+
+      <h3>4. 任务系统</h3>
+      <ul>
+        <li><b>任务生成</b>：每次整备阶段随机提供 <span class="num-hl">2</span> 个可选任务。</li>
+        <li><b>任务追踪</b>：实时检测目标达成状态（如“已装备5件装备”）。</li>
+        <li><b>奖励发放</b>：完成任务获得金币与分数加成。</li>
+        <li><b>非强制性</b>：玩家可忽略任务，但会错失奖励。</li>
+      </ul>
+      <div class="table-wrap"><table>
+        <thead><tr><th>任务id</th><th>名称</th><th>目标</th><th>金币奖励</th><th>分数奖励</th></tr></thead>
+        <tbody>
+          <tr><td>T01</td><td>深入地下</td><td>抵达第3层</td><td class="num-hl">50</td><td class="num-hl">150</td></tr>
+          <tr><td>T02</td><td>奇景探索</td><td>探索2个奇景地块</td><td class="num-hl">70</td><td class="num-hl">150</td></tr>
+          <tr><td>T03</td><td>挨饿德附体</td><td>未使用任何食物/水完成探索并撤离</td><td class="num-hl">90</td><td class="num-hl">150</td></tr>
+          <tr><td>T04</td><td>奇景采样任务</td><td>1.在洞穴真菌奇景地采集孢子 ／ 2.在水晶洞采集水晶方解石 ／ 3.天青石洞穴采集天青石 ／ 4.在云朵石洞穴采集云朵</td><td class="num-hl">200</td><td class="num-hl">300</td></tr>
+          <tr><td>T05</td><td>水区采样任务</td><td>采集河床黏土</td><td class="num-hl">100</td><td class="num-hl">150</td></tr>
+          <tr><td>T06</td><td>陡坡</td><td>采集风化碎片</td><td class="num-hl">100</td><td class="num-hl">150</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>5. 洞穴探索系统</h3>
+      <p><b>地图结构</b>：2D网格。玩家会出生在一个初始格 A，从 A 出发；每次移动至相邻未探索格子，消耗体力并揭示该格类型并触发事件；在下降区可选择进入下一层。</p>
+      <p><b>地块类型与事件规则</b>：</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>分类</th><th>地块</th><th>UI</th><th>事件</th><th>效果</th></tr></thead>
+        <tbody>
+          <tr><td class="mut">—</td><td>平坦洞穴</td><td>-</td><td>必然-无事发生 ／ 随机-检测（60%）</td><td>无事发生-没有任何特殊效果 ／ 检测-预知下一格地形 + 随机揭示1个邻格中相同地形的数量</td></tr>
+          <tr><td>危险地形</td><td>陡道</td><td>-</td><td>必然-攀爬 ／ 随机-落石（30%）</td><td>攀爬-下一次移动需要使用攀爬工具或者花费加倍体力（<span class="num-hl">15</span>点）通过（同时不花费工具会有30%出现脚滑的随机事件）／ 脚滑-角色失衡，损失 <span class="num-hl">8</span> 点体力 ／ 落石-若无头盔，-<span class="num-hl">20</span> 点体力</td></tr>
+          <tr><td>危险地形</td><td>窄道</td><td>-</td><td>必然-匍匐 ／ 随机-卡住（40%）</td><td>匍匐-匍匐前进时若未穿护具，会因岩石摩擦损失 <span class="num-hl">12</span> 点体力；穿戴则顺利通过。／ 卡住-需要消耗 <span class="num-hl">10</span> 点体力挣脱</td></tr>
+          <tr><td>危险地形</td><td>水区</td><td>-</td><td>必然-淌水 ／ 随机-脚滑（10%）</td><td>淌水-若无防水裤，-<span class="num-hl">10</span> 点体力；有则无损 ／ 脚滑-角色失衡，损失 <span class="num-hl">8</span> 点体力</td></tr>
+          <tr><td>危险地形</td><td>下降区</td><td>-</td><td>必然-下降 ／ 随机-失足（5%）脚滑（10%）</td><td>下降-进入下一层 ／ 速降-若同时拥有 绳索+手套，触发“双绳技术”，体力消耗 <span class="num-hl">-5</span> ／ 失足-下降时若未穿洞穴专用靴，有概率失足滑落，游戏结束 ／ 脚滑-角色失衡，损失 <span class="num-hl">8</span> 点体力</td></tr>
+          <tr><td class="mut">—</td><td>奇景</td><td>-</td><td>落脚点（20%）／ 随机-检测（80%）</td><td>落脚点–在奇景某处发现一处相对平坦、干燥的岩石平台，可安全坐下休息；恢复 <span class="num-hl">25</span> 点体力 ／ 检测-知道将要前往下一格子的地形，并随机揭晓一个一格范围内未知地块的相同地形数量</td></tr>
+          <tr><td class="mut">—</td><td>营地</td><td>-</td><td>必然-整备 ／ 随机-扩容（60%）／ 条件-装备检查</td><td>整备-恢复较多体力 ／ 扩容-背包临时扩大一定格子 ／ 装备检查–若同时装备 头盔+护具+手套+防水裤+靴子，则激活“快速整备”效果：→ 下次通过 陡道／窄道／水区 时，负面事件（脚滑／卡住／湿重）触发概率 <span class="num-hl">-50%</span>，持续至下次进入营地</td></tr>
+          <tr><td class="mut">—</td><td>废弃营地</td><td>-</td><td>随机-扩容（20%）／ 随机-食物获取（20%）</td><td>扩容-背包临时扩大一定格子 ／ 食物获取-获得一份食物</td></tr>
+        </tbody>
+      </table></div>
+      <div class="card-note"><b>事件呈现：</b>每次事件发生后，弹出全屏事件面板（可由AI生成叙事文本），玩家确认后继续。</div>
+
+      <h3>6. 体力与资源系统</h3>
+      <ul>
+        <li><b>体力</b>：初始值 Z（建议 <span class="num-hl">100</span>）。</li>
+        <li>移动／事件均消耗体力。</li>
+        <li>体力 ≤ <span class="num-hl">0</span> → 探索失败，返回整备界面。</li>
+        <li>体力可通过 食物／水、营地、奇景落脚点 恢复。</li>
+      </ul>
+      <div class="table-wrap"><table>
+        <thead><tr><th>参数名</th><th>数值</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>初始体力 (Z)</td><td class="num-hl">100</td><td>探索开始时的体力上限</td></tr>
+          <tr><td>平坦洞穴移动消耗</td><td class="num-hl">5</td><td>移动至平坦洞穴格消耗体力</td></tr>
+          <tr><td>陡道攀爬消耗（无工具）</td><td class="num-hl">15</td><td>无手套时攀爬陡道体力消耗（含30%脚滑风险）</td></tr>
+          <tr><td>陡道攀爬消耗（有手套）</td><td class="num-hl">8</td><td>有手套时正常攀爬消耗</td></tr>
+          <tr><td>落石伤害（无头盔）</td><td class="num-hl">20</td><td>陡道落石事件中未戴头盔的体力损失</td></tr>
+          <tr><td>匍匐伤害（无护具）</td><td class="num-hl">12</td><td>窄道匍匐未穿护具的体力损失</td></tr>
+          <tr><td>卡住挣脱消耗</td><td class="num-hl">10</td><td>窄道卡住后挣脱所需体力</td></tr>
+          <tr><td>淌水伤害（无防水裤）</td><td class="num-hl">10</td><td>水区未穿防水裤的体力损失</td></tr>
+          <tr><td>脚滑伤害（通用）</td><td class="num-hl">8</td><td>任何地形脚滑事件的体力损失</td></tr>
+          <tr><td>下降区基础消耗</td><td class="num-hl">10</td><td>进入下一层的基础体力消耗</td></tr>
+          <tr><td>双绳技术节省</td><td class="num-hl">-5</td><td>同时拥有绳索+手套时，下降体力消耗减少5点</td></tr>
+          <tr><td>奇景落脚点恢复</td><td class="num-hl">25</td><td>在奇景触发“落脚点”恢复的体力</td></tr>
+          <tr><td>营地整备恢复</td><td class="num-hl">40</td><td>在营地整备时恢复的体力</td></tr>
+          <tr><td>食物回复</td><td class="num-hl">20</td><td>使用食物和水时回复的体力</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>7. 技能卡系统</h3>
+      <p><b>技能卡基础规则</b>：能力增强模块，通过整备阶段选择解锁，在整备阶段装备，影响探索行为。</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>属性</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>获取方式</td><td>整备界面选择</td></tr>
+          <tr><td>装备上限</td><td>每次最多使用一张</td></tr>
+          <tr><td>装备位置</td><td>独立于背包之外的技能槽</td></tr>
+          <tr><td>生效时机</td><td>装备后生效</td></tr>
+        </tbody>
+      </table></div>
+      <p><b>技能卡配置表</b>：</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>技能卡类型</th><th>技能卡名称</th><th>获取条件</th><th>效果描述</th><th>价格</th></tr></thead>
+        <tbody>
+          <tr><td>初始</td><td>中型背包</td><td>初始可用</td><td>背包+1格</td><td class="num-hl">0</td></tr>
+          <tr><td>初始</td><td>体能强化</td><td>初始可用</td><td>初始体力120（+20）</td><td class="num-hl">0</td></tr>
+          <tr><td>生存</td><td>强身健体</td><td>完成1层探索</td><td>所有负面事件触发概率 -30%</td><td class="num-hl">100</td></tr>
+          <tr><td>生存</td><td>应急口粮</td><td>曾因体力≤0失败</td><td>体力 ≤20 时，自动生成1份食物（消耗1格，仅1次/局）</td><td class="num-hl">120</td></tr>
+          <tr><td>生存</td><td>极限耐受</td><td>通过窄/陡/水各1次</td><td>通过地形时：体力消耗 -3</td><td class="num-hl">100</td></tr>
+          <tr><td>科研</td><td>目标明确</td><td>完成1次奇景采样任务</td><td>进入新层时自动标记奇景位置，仅触发一次</td><td class="num-hl">140</td></tr>
+          <tr><td>科研</td><td>科研专家</td><td>完成3次奇景采样任务</td><td>采集奇景样本不消耗行动力，任务奖励+50分</td><td class="num-hl">150</td></tr>
+          <tr><td>科研</td><td>奇景共鸣</td><td>单局探索2个奇景</td><td>在奇景休息时，30%概率额外获得1个随机任务</td><td class="num-hl">190</td></tr>
+          <tr><td>机动</td><td>轻装专家</td><td>以≤5格背包完成1次探索</td><td>整局背包 ≤5格时：移动体力 -2，负面事件 -15%</td><td class="num-hl">120</td></tr>
+          <tr><td>机动</td><td>高效撤离</td><td>主动撤离成功2次</td><td>撤离不再需要上升器</td><td class="num-hl">180</td></tr>
+          <tr><td>机动</td><td>地图专家</td><td>单局抵达第4层</td><td>主动撤离后，下局整备保留上一层地图结构</td><td class="num-hl">140</td></tr>
+          <tr><td>信息</td><td>地形直觉</td><td>完成2次“深入地下”任务</td><td>进入新地块时，揭示所有相邻格的地形类型，仅触发一次</td><td class="num-hl">100</td></tr>
+          <tr><td>信息</td><td>风险扫描</td><td>在奇景休息3次</td><td>免疫第一次触发的危险事件</td><td class="num-hl">150</td></tr>
+          <tr><td>信息</td><td>回声定位</td><td>探索5个奇景</td><td>在奇景触发“检测”事件时，额外揭示1个邻格的具体事件</td><td class="num-hl">180</td></tr>
+          <tr><td>资源</td><td>模块化装备</td><td>背包总容量 ≥12</td><td>所有装备类道具占格 -1（最低1格）</td><td class="num-hl">200</td></tr>
+          <tr><td>资源</td><td>大型背包</td><td>局内触发背包扩容事件1次</td><td>背包 +3 格</td><td class="num-hl">100</td></tr>
+          <tr><td>资源</td><td>轻量化采样</td><td>完成任意采样任务</td><td>“采样工具套件”4→3格，“采样袋”1→0格</td><td class="num-hl">200</td></tr>
+          <tr><td>风险</td><td>深洞赌徒</td><td>单局抵达第3层</td><td>每深入1层（≥2层），移动体力消耗 -2，但事件伤害 +3</td><td class="num-hl">100</td></tr>
+          <tr><td>风险</td><td>无护穿越</td><td>无装备通过3种危险地形</td><td>未装备护具时通过危险地形，获得10金币（每格限1次）</td><td class="num-hl">100</td></tr>
+          <tr><td>风险</td><td>孤注一掷</td><td>完成1次全程未撤离的探索</td><td>若本局未主动撤离，则最终得分 ×1.3 倍</td><td class="num-hl">100</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>8. 对局结束与结算系统</h3>
+      <p><b>游戏结束条件</b>：游戏在探索阶段中，满足以下任一条件时立即结束当前探险，并进入结算界面：</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>条件</th><th>触发方式</th></tr></thead>
+        <tbody>
+          <tr><td>体力 ≤ 0</td><td>移动或者事件消耗体力后检测</td></tr>
+          <tr><td>主动撤离</td><td>玩家在体力不为0、没触发任何事件、拥有上升器时按下撤离按键</td></tr>
+        </tbody>
+      </table></div>
+      <p><b>结算触发流程</b>：若因体力耗尽结束，结算界面标题显示「神秘园传来噩耗」；若为主动撤离，标题显示「安全撤离 + 明智的选择」。当玩家悬停【撤离】按钮时，显示提示：“现在撤离可保留当前进度，但可能因洞穴不稳定而损失部分分数。”</p>
+
+      <div class="callout"><b>风险判定机制：</b>玩家选择主动撤离后，在进入结算前立即执行一次风险判定。<br>
+      基础风险率 = 最高探索层数 N2 × <span class="num-hl">2%</span>；背包满载时风险率 <span class="num-hl">+10%</span>；最终风险率 = 基础风险率 + 满载风险率（上限 <span class="num-hl">70%</span>）。判定触发后，扣除最终分数的 <span class="num-hl">20%</span>，扣除后分数不低于 0。<br>
+      示例：玩家在第五层背包满载撤离，风险率为 <span class="num-hl">5×2%+10% = 20%</span>；最终结算分数 500，有20%概率变为 <span class="num-hl">500×0.8 = 400</span>。</div>
+
+      <p><b>分数结算规则</b>：最终分数由三部分构成，总分 = ∑ 各项得分。</p>
+      <ul>
+        <li><b>探索地块奖励</b>：探索地块数量为 N1，Region_core = N1 × <span class="num-hl">10</span>。</li>
+        <li><b>深度奖励</b>：抵达层数为 N2，depth_core = N2 × <span class="num-hl">100</span>。</li>
+        <li><b>任务完成奖励</b>：完成任务数为 N3，task_core = N3 × <span class="num-hl">150</span>。</li>
+        <li><b>体力奖励</b>：剩余体力为 HP，hp_core = HP × <span class="num-hl">1</span>。</li>
+      </ul>
+
+      <p><b>结算界面内容</b>（从上至下）：</p>
+      <ul>
+        <li><b>结束原因图标 + 文案</b>：体力耗尽 或 主动撤离。</li>
+        <li><b>结算文案</b>：风险结果。</li>
+        <li><b>关键数据统计</b>：最大深入层数：第 {N2} 层；完成任务数：{N3}；剩余体力：{HP}。</li>
+        <li><b>得分明细</b>：探索地块奖励 +100 ／ 深度奖励 +300 ／ 任务完成 +300 ／ 体力奖励 +100 ／ 总分：<span class="num-hl">800</span>。</li>
+        <li><b>操作按钮</b>：【返回整备】→ 返回主整备界面，保留本次解锁的道具/技能；【重新开始】→ 重置探险（可选）。</li>
+      </ul>
+
+      <h2>二、叙事背景</h2>
+      <h3>1. 背景设定</h3>
+      <p>2030年，中国西南某省地质调查局在一次常规岩溶地貌普查中，于云岭山区发现一处未被记录的超深垂直洞穴系统。初步探测显示，该洞穴至少有五层结构，深度超过300米，内部存在罕见的地下河网络、古生物化石沉积层及独特微生物群落，具有极高的科研价值。</p>
+      <p>因其强磁场屏蔽一切电子信号，迫使地质局启动高危的人工勘探。你作为顶尖洞穴专家，肩负着在洞穴深入并且采集关键样本的使命。洞内危机四伏：失温、迷途、岩崩。唯一的慰藉是那些“奇景”——荧光菌毯是生命的微光，也是生态崩溃的警报；共鸣腔室的回响既是天籁，也是解开地心秘密的钥匙。当你在前任探险员遗落的录音笔中听到绝望的低语，你意识到，这次任务不仅是科学探索，更是一场与时间、自然乃至自身恐惧的终极对决。</p>
+      <h3>2. 玩家身份</h3>
+      <p>你是一名经验丰富的技术洞穴探险员兼野外科研协作者。你接受过绳索技术、密闭空间生存、地质采样与应急医疗训练，并签署高危作业协议。你的任务是：</p>
+      <ul>
+        <li>安全穿越各层洞穴区域</li>
+        <li>记录地形与潜在风险点</li>
+        <li>在指定地点采集样本</li>
+        <li>如遇不可控风险，立即启动撤离程序</li>
+      </ul>
+      <p>每次下洞前，你可在基地进行有限物资整备：根据已知情报选择装备、补给与行动策略。洞内无信号、无支援，一切决策由你独立完成。</p>
+      <h3>3. 核心原则</h3>
+      <ul>
+        <li><b>安全第一</b>：体力耗尽意味着失温、判断力下降，必须撤离。</li>
+        <li><b>装备决定能力</b>：没有防水裤，涉水将导致失温；没有手套，攀爬易滑坠。</li>
+        <li><b>信息即生命</b>：提前购买地图可减少误入高危区域的概率。</li>
+      </ul>
+      <div class="callout"><b>“这不是一场冒险，而是一次科学使命。每一次下潜，都在拓展人类对地球隐秘角落的认知边界。”</b></div>
+
+      <h2>三、美术</h2>
+      <h3>1. 美术风格</h3>
+      <p>整体采用低多边形卡通风格，以暖色手电光与冷色洞穴环境形成明暗对比，突出未知与探索的紧张感。地块类型以图标与颜色直接区分：平坦=<b>灰棕</b>、危险地形=<b>红橙</b>、奇景=<b>青蓝</b>、营地=<b>暖黄</b>，保证玩家一眼读图。UI 采用一致的几何拼贴风格，与拼图背包的玩法逻辑相呼应。</p>
+      <h3>2. UI布局</h3>
+      <p>页面导航：开始页面 → 整备页面（商店／背包／技能卡／任务 | 进入洞穴）→ 游戏页面（探索地块／消耗体力／触发事件）→ 结算页面（返回整备／重新开始）。整备页面中，鼠标悬停道具或技能卡时右侧紫色区域显示详情。</p>
+      <ul>
+        <li><b>开始页面</b>：开始游戏 ／ 游戏设置 ／ 退出游戏。</li>
+        <li><b>设置页面</b>：游戏音量调节 ／ 游戏窗口设置 ／ 返回主菜单。</li>
+        <li><b>整备页面</b>：商店 ／ 背包 ／ 技能卡 ／ 查看任务 ／ 进入洞穴 ／ 返回主菜单。</li>
+        <li><b>任务页面</b>：可接取任务 ／ 已接取任务 ／ 返回整备。</li>
+        <li><b>游戏页面</b>：地块格 ／ 体力条 ／ 撤离按钮。</li>
+        <li><b>事件页面</b>：事件详情 ／ 事件效果 ／ 继续按钮。</li>
+        <li><b>结算页面</b>：结束原因图标 + 文案 ／ 关键数据统计 ／ 得分明细 ／ 返回按钮 ／ 重新开始按钮。</li>
+      </ul>
+
+    </div>
+  </div>
+  <footer><p>在线作品集 · 托管于 GitHub Pages ｜《探洞先锋》为原创项目，主策划：李伟翔</p></footer>
+</div>
+</body>
+</html>

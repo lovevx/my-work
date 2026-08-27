@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>王者数值建模 · 作品摘要 · 李伟翔 作品集</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<nav class="nav"><div class="nav-in">
+  <span class="brand">Li<span class="dot">·</span>Weixiang</span>
+  <span class="sp"></span>
+  <a class="lnk" href="../index.html">返回总目录</a>
+  <span class="run">在线作品集 · GitHub Pages</span>
+</div></nav>
+<div class="page">
+  <div class="article">
+    <p class="crumb"><a href="../index.html">总目录</a> / 王者数值建模</p>
+    <header class="art-head">
+      <span class="badge b-num">数值 · 主打</span>
+      <h1>王者数值建模 · 作品摘要</h1>
+      <p class="art-meta">MATLAB MOBA 伤害仿真 · 减伤/穿透/英雄画像方法论 · 量化结论 → 策划语言</p>
+      <div class="art-dl"><a class="btn ghost" href="../files/王者数值建模_作品摘要.docx">下载原始文件 docx</a></div>
+    </header>
+    <div class="art-body">
+
+      <p class="lead">本文是《基于数值建模的王者荣耀装备与铭文伤害系统分析》（本科毕业论文）的核心理念提炼与策划方法论沉淀。作者李伟翔（自动化专业，工具：MATLAB），把游戏底层伤害公式拆解、量化重建，做成「可调参的直观伤害分析器」，将经验试错升级为数据驱动。</p>
+
+      <h2>① 一句话定位</h2>
+      <p>基于 MATLAB 搭建的 MOBA 装备与铭文——伤害数值仿真系统：把《王者荣耀》底层伤害公式拆解、量化重建，做成「可调参的直观伤害分析器」，用于定量评估任意「装备＋铭文＋英雄＋目标防御」组合的输出表现，把经验试错升级为数据驱动。</p>
+
+      <h2>② 为什么做｜解决谁的什么问题</h2>
+      <p>数值装备与铭文的选择，直接决定英雄输出上限，但目前研究多是主观经验、缺乏可量化、可复现的数据支撑。三方角色都面临数值决策困境：</p>
+      <ul>
+        <li><b>一般玩家</b>：没有量化手段，出装备只能跟攻略或凭感觉；</li>
+        <li><b>职业战队</b>：赛前需基于当前版本制定禁用/选角与针对性出装策略；</li>
+        <li><b>游戏开发者</b>：识别「超模/弱势」组合、预判版本走向并做平衡性微调。</li>
+      </ul>
+      <p>本论文定位的正是这套数据支撑：一套能算清「不同组合能打出多少伤害、值不值」的仿真方法论与工具。</p>
+
+      <h2>③ 做了什么｜核心产出</h2>
+      <ul>
+        <li><b>三类伤害建模</b>：物理 / 法术 / 真实 三类伤害的完整计算流程建模，明确护甲减伤、属性穿透、暴击判定等核心公式；</li>
+        <li><b>五类英雄分型</b>：将英雄分为 物理爆发 / 物理持续 / 法术爆发 / 法术持续 / 真实伤害 五类，逐类建立伤害模型；</li>
+        <li><b>工程架构</b>：MATLAB 面向对象实现「数据层—模型层—分析层」三层架构、七大模块、可视化伤害分析器；</li>
+        <li><b>核心算法</b>：DPS 曲线生成、贪心装备优化器、全组合铭文搜索、蒙特卡洛暴击分布模拟。</li>
+      </ul>
+
+      <h2>④ 方法论沉淀｜策划视角最有价值的东西</h2>
+      <h3>（一）减伤算法：双曲线「边际递减」＋有效生命「线性」</h3>
+      <div class="callout"><b>减伤率</b> R = 防御 / (防御 + 602)，随防御提高增速放缓（边际收益递减，防止过高防御达成「无敌」）；但有效生命倍率 = 1/(1−R) 随防御线性增长，即「每一点防御对生存的贡献等价」。这是 MOBA 减伤数值的通用骨架。</div>
+      <div class="table-wrap"><table>
+        <tr><th>防御值</th><th>减伤率</th><th>有效生命倍率</th><th>防御值</th><th>减伤率</th><th>有效生命倍率</th></tr>
+        <tr><td>0</td><td><span class="num-hl">0%</span></td><td><span class="num-hl">1.00x</span></td><td>1000</td><td><span class="num-hl">62.4%</span></td><td><span class="num-hl">2.66x</span></td></tr>
+        <tr><td>300</td><td><span class="num-hl">33.2%</span></td><td><span class="num-hl">1.50x</span></td><td>1500</td><td><span class="num-hl">71.4%</span></td><td><span class="num-hl">3.50x</span></td></tr>
+        <tr><td>602</td><td><span class="num-hl">50.0%</span></td><td><span class="num-hl">2.00x</span></td><td>2000</td><td><span class="num-hl">76.8%</span></td><td><span class="num-hl">4.32x</span></td></tr>
+      </table></div>
+
+      <h3>（二）穿透两段式：先固定、后百分比；按目标防御动态选型</h3>
+      <ul>
+        <li><b>计算顺序</b>：先从护甲扣除固定穿透，再对剩余护甲应用百分比穿透（例：<span class="num-hl">800甲－100固定－40%百分比</span>→有效 <span class="num-hl">420</span>→减伤约 <span class="num-hl">41.1%</span>）；</li>
+        <li><b>选型铁律</b>：目标防御低→固定穿透收益高（暗影战斧 <span class="num-hl">180</span>）；目标防御高→百分比穿透必带（破晓/虚无法杖）；</li>
+        <li><b>实证</b>：固定穿透收益随目标防御升高而递减（<span class="num-hl">300甲</span>时 <span class="num-hl">100穿透</span>降减伤 <span class="num-hl">9.6pct</span>，<span class="num-hl">1000甲</span>时仅 <span class="num-hl">4.6pct</span>）。</li>
+      </ul>
+
+      <h3>（三）五类英雄输出画像</h3>
+      <div class="table-wrap"><table>
+        <tr><th>英雄类型</th><th>DPS 曲线形态</th><th>伤害构成（10s）</th><th>出装侧重</th></tr>
+        <tr><td>物理爆发</td><td>脉冲式尖峰—低谷</td><td>技能 <span class="num-hl">72%</span> / 被动·特效 <span class="num-hl">20%</span> / 普攻 <span class="num-hl">8%</span></td><td>物攻 + 穿透 + 暴击伤害</td></tr>
+        <tr><td>物理持续</td><td>平稳带周期小波动</td><td>普攻 <span class="num-hl">60%</span> / 特效 <span class="num-hl">30%</span> / 技能 <span class="num-hl">10%</span></td><td>攻速 + 暴击率 + 触发装(末世/电刀)</td></tr>
+        <tr><td>法术爆发</td><td>极短窗口冲高后归零</td><td>技能 <span class="num-hl">75%</span> / 特效 <span class="num-hl">20%</span> / 普攻 <span class="num-hl">5%</span></td><td>法强 + 法穿 + 冷却</td></tr>
+        <tr><td>法术持续</td><td>阶梯式(DOT 层数上升)</td><td>技能 <span class="num-hl">55%</span> / DOT+特效 <span class="num-hl">30%</span></td><td>法强 + 冷却 + 持续结算</td></tr>
+        <tr><td>真实伤害</td><td>不受抗性压制的稳定线</td><td>真伤 <span class="num-hl">30%</span>(随战斗时长提升)</td><td>真伤前置条件 + 生存</td></tr>
+      </table></div>
+
+      <h3>（四）数值指标方法论：把「手感」变成「口径」</h3>
+      <ul>
+        <li><b>DPCE</b>＝每金币伤害增量，作为装备经济收益的统一口径（费用/实战收益双因素）；</li>
+        <li><b>有效生命（EHP）、击杀时间（TTK）</b>：量化攻防取舍与生存——输出时间内的存活率决定有效输出；</li>
+        <li><b>峰值 DPS / 平均 DPS</b>：爆发型看峰值、持续型看平均，分别代表「斩杀力」与「稳定性」。</li>
+      </ul>
+
+      <h2>⑤ 关键量化结论（可直接复用的数字）</h2>
+      <ul>
+        <li><b>铭文收益（物理爆发）</b>：百穿铭文(异变+鹰眼+隐匿)让物理爆发前期伤害提升约 <span class="num-hl">20%</span>（兰陵王 DPS <span class="num-hl">280.4→336.5</span>）；</li>
+        <li><b>铭文收益（法术爆发）</b>：法穿铭文(梦魇+心眼+狩猎)让法术爆发伤害提升约 <span class="num-hl">22%</span>（干将莫邪）；</li>
+        <li><b>穿透收益（高防目标）</b>：目标护甲 <span class="num-hl">1000</span>：破晓 <span class="num-hl">45%</span> 百分比穿透降减伤约 <span class="num-hl">14.7pct</span>，伤害提升约 <span class="num-hl">28%</span>，是打坦克的核心；</li>
+        <li><b>穿透选型阈值</b>：目标护甲 ≦<span class="num-hl">300</span> 固定穿透即可；<span class="num-hl">400–600</span> 需固定+百分比结合；≧<span class="num-hl">800</span> 百分比穿透必带；</li>
+        <li><b>爆发 vs 持续</b>：爆发型峰值/平均 DPS = <span class="num-hl">3~5</span>、前3秒占 <span class="num-hl">60–70%</span>；持续型峰值/平均 = <span class="num-hl">1.2~1.5</span>、前3秒仅 <span class="num-hl">25–30%</span>；</li>
+        <li><b>真实伤害</b>：无视抗性、占比随战斗时长提升，对高坦目标极有效（护甲 <span class="num-hl">600</span> 时真伤占 <span class="num-hl">40–50%</span>）；</li>
+        <li><b>机制约束</b>：攻速已删阈值、与普攻间隔严格线性；CDR 上限 <span class="num-hl">40%</span>；默认暴击伤害 <span class="num-hl">185%</span>（无尽 <span class="num-hl">+40%</span>）——建模硬约束。</li>
+      </ul>
+
+      <h2>⑥ 工程与工具落地</h2>
+      <div class="table-wrap"><table>
+        <tr><th>指标</th><th>数值</th></tr>
+        <tr><td>单次 10s 伤害仿真</td><td>&lt; <span class="num-hl">0.1</span> 秒</td></tr>
+        <tr><td>蒙特卡洛模拟（1000 次）</td><td>&lt; <span class="num-hl">30</span> 秒</td></tr>
+        <tr><td>贪心全装备组合搜索（预算内）</td><td>&lt; <span class="num-hl">5</span> 分钟</td></tr>
+        <tr><td>数据载入（DataLoader）</td><td>&lt; <span class="num-hl">0.5</span> 秒</td></tr>
+        <tr><td>峰值内存占用</td><td>&lt; <span class="num-hl">200MB</span></td></tr>
+      </table></div>
+      <p>基于面向对象设计（Hero 基类 ＋ 五类子类多态、Target 假人、DamageAnalyzer 分析引擎、公式静态模块），通过 CSV 统一管理英雄/装备/铭文数据，具备通用性与可扩展性。</p>
+
+      <h2>⑦ 局限与下一步</h2>
+      <div class="callout"><b>当前局限</b>：单目标站桩场景，未含走位/位移/控制/AOE；数据靠人工配表、版本更新时效性受限；贪心算法忽略装备协同，非全局最优。</div>
+      <p><b>未来方向</b>：多目标团队伤害与协同、实时对局数据解析、机器学习驱动协同搜索、以及跨 MOBA（LOL手游/DOTA2/平安京）方法论迁移。</p>
+
+      <h2>⑧ 对系统 / 数值策划岗位的价值</h2>
+      <div class="callout"><b>系统策划核心能力闭环</b>：这套作品证明的不只是「会算」，而是把抽象游戏规则翻译成可计算模型 → 用工具量化验证 → 输出可落地的配表与调优决策（穿透分档、铭文套装、装备 DPCE 排序、版本预判）。它不是纯学术论文，而是一套能直接迁移到任何数值/配置/平衡工作场景的方法论与工具。</div>
+
+    </div>
+  </div>
+  <footer><p>在线作品集 · 托管于 GitHub Pages ｜ 基于MATLAB的MOBA数值建模毕设摘要，方向为数值策划</p></footer>
+</div>
+</body>
+</html>
