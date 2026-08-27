@@ -32,6 +32,13 @@
 | 杖剑传说 · 报告 | [手游杖剑传说体验分析报告.docx](files/手游杖剑传说体验分析报告.docx) |
 | 超自然行动组 · 引导 | [超自然行动组新手引导流程.docx](files/超自然行动组新手引导流程.docx) |
 
+## 游戏试玩包（Windows）
+
+| 游戏 | 下载 | 大小 |
+| --- | --- | --- |
+| Boomame 独立版 | [Boomame_Windows.exe（单文件，下载即玩）](https://github.com/lovevx/my-work/releases/download/demo-builds/Boomame_Windows.exe) | 约 128MB |
+| 勇者传说 Windows 版 | [YongZhe_Windows.zip（解压即玩）](https://github.com/lovevx/my-work/releases/download/demo-builds/YongZhe_Windows.zip) | 约 36MB |
+
 ## 简历
 
 [李伟翔_游戏系统策划简历_优化版.docx](files/李伟翔_游戏系统策划简历_优化版.docx)
