@@ -37,7 +37,7 @@
 | 游戏 | 下载 | 大小 |
 | --- | --- | --- |
 | Boomame 独立版 | [Boomame_Windows.exe（单文件，下载即玩）](https://github.com/lovevx/my-work/releases/download/demo-builds/Boomame_Windows.exe) | 约 128MB |
-| 勇者传说 Windows 版 | [YongZhe_Windows.zip（解压即玩）](https://github.com/lovevx/my-work/releases/download/demo-builds/YongZhe_Windows.zip) | 约 36MB |
+| 勇者传说 Windows 版 | [YongZhe_Windows.zip（解压即玩）](https://github.com/lovevx/my-work/releases/download/demo-builds/YongZhe_Windows.zip) | 约 42MB |
 
 ## 演示视频
 
