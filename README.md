@@ -1,8 +1,10 @@
-# 李伟翔 · 游戏策划 作品集
+# 李伟翔 · 游戏系统 / 数值策划 作品集
 
 求职作品集。每件作品均可**在线阅读（渲染好的网页）**或**下载原始 docx / xlsx**。
 
-主攻 **系统策划 / 执行策划**。
+主攻 **系统策划 / 执行策划**，数值建模毕设作为数值方向后备主打。
+能力闭环：`系统设计 → 数值配表 → 工具化落地 → 竞品复盘`。
+
 ---
 
 ## 作品（点击在线阅读）
@@ -36,6 +38,12 @@
 | --- | --- | --- |
 | Boomame 独立版 | [Boomame_Windows.exe（单文件，下载即玩）](https://github.com/lovevx/my-work/releases/download/demo-builds/Boomame_Windows.exe) | 约 128MB |
 | 勇者传说 Windows 版 | [YongZhe_Windows.zip（解压即玩）](https://github.com/lovevx/my-work/releases/download/demo-builds/YongZhe_Windows.zip) | 约 36MB |
+
+## 演示视频
+
+| 项目 | 视频 |
+| --- | --- |
+| 勇者传说（勇者之路） | [点击观看 / 下载](videos/勇者之路.mp4) |
 
 ## 简历
 
