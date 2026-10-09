@@ -12,7 +12,7 @@
 | 作品 | 简介 | 在线阅读 |
 | --- | --- | --- |
 | 探洞先锋 · GDD | 从 0 到 1 从核心循环到结算全链路的主策划设计文档 | [在线阅读](https://lovevx.github.io/my-work/works/tan-dong-xian-feng.html) |
-| Boomame · 独立 2D 游戏 | 一人完成玩法→数值→Godot 开发→迭代的独立项目 | [项目页](https://lovevx.github.io/my-work/works/boomame.html) |
+| Boomame · 独立 2D 游戏 | 破坏→收益→自动化；当前美术、数值、实机视频与下落修复（2026-10-09） | [项目页](https://lovevx.github.io/my-work/works/boomame.html) |
 | 空之轨迹1st · 战斗与养成拆解 | 经典 JRPG 系统拆解 + 面向移动端可迁移思路 | [在线阅读](https://lovevx.github.io/my-work/works/kongzhigui-1st.html) |
 | 鸣潮商城系统 | 商业化系统 + 可读配表（xlsx 落地成品） | [在线阅读](https://lovevx.github.io/my-work/works/mingchao-mall.html) |
 | 王者数值建模 · 作品摘要 | MOBA 装备铭文伤害仿真，方法论 + 量化结论 | [在线阅读](https://lovevx.github.io/my-work/works/wangzhe-numerics.html) |
@@ -20,6 +20,8 @@
 | 超自然行动组 · 新手引导改造 | 体验→问题定位→三阶段递进改造的引导设计 | [在线阅读](https://lovevx.github.io/my-work/works/chaoziran-tutorial.html) |
 
 ## 原始文档下载
+
+Boomame 当前源码与参数见 [游戏仓库](https://github.com/lovevx/boom)、[数值平衡](https://github.com/lovevx/boom/blob/main/docs/Numeric_Balance.md)和[本次更新记录](https://github.com/lovevx/boom/blob/main/docs/Release_2026-10-09.md)。以下 Word 文件保留早期设计材料。
 
 | 作品 | 文件 |
 | --- | --- |
@@ -36,14 +38,14 @@
 
 | 游戏 | 下载 | 大小 |
 | --- | --- | --- |
-| Boomame 独立版 | [Boomame_Windows.exe（单文件，下载即玩）](https://github.com/lovevx/my-work/releases/download/demo-builds/Boomame_Windows.exe) | 约 128MB |
+| Boomame · 2026-10-09 | [Boomame_Windows.zip（解压后运行，无需 Godot）](https://github.com/lovevx/boom/releases/download/snapshot-2026-10-09/Boomame_Windows.zip) | 以 Release 标注为准 |
 | 勇者传说 Windows 版 | [YongZhe_Windows.zip（解压即玩）](https://github.com/lovevx/my-work/releases/download/demo-builds/YongZhe_Windows.zip) | 约 42MB |
 
 ## 演示视频
 
 | 项目 | 视频 |
 | --- | --- |
-| Boomame 独立游戏 | [点击观看 / 下载](videos/boomame.mp4) |
+| Boomame 当前美术与自动轰炸演示 | [点击观看 / 下载](videos/boomame.mp4) |
 | 勇者传说（勇者之路） | [点击观看 / 下载](videos/勇者之路.mp4) |
 
 ## 简历
