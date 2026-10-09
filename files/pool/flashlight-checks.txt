@@ -1,0 +1,46 @@
+DARKNESS_VISIBILITY_PASS
+PASS Outside sorrow restores the original lighting
+PASS Entry has intermediate brightness
+PASS Entry reaches its configured darkness
+MEASURE ambient=0.315 foot=0.647 beam=0.990
+PASS Remote darkness retains silhouettes; feet and beam have distinct brightness
+MEASURE beam center=0.945 feather=0.743 outside=0.295
+PASS Beam edge fades continuously
+PASS Anger region brightness stays unchanged
+MEASURE stone shadow=0.058 clear=0.125
+PASS Stone hides its far side, and disabling the silhouette restores the beam
+PASS Room wall blocks light, and a disabled wall stops casting a shadow
+PASS Facing turns the beam toward (1.00, 0.00)
+PASS Facing turns the beam toward (-1.00, 0.00)
+PASS Facing turns the beam toward (0.00, 1.00)
+PASS Facing turns the beam toward (0.00, -1.00)
+PASS Pause freezes darkness transition and beam turning
+PASS Exit restores brightness gradually
+PASS Exit finishes with no residual darkness
+PASS Lighting shader compiles successfully
+PASS Forward pickup and monster are inside flashlight sight
+PASS Foot halo does not grant rear pickup sight
+PASS Only the illuminated nearby pickup gets an interaction prompt
+PASS An unseen pickup cannot be collected by proximity
+PASS A monster in the visible beam gets a normal threat indication
+MEASURE entity pixels pickup=0.391155 monster=0.614014 rear=0.000000
+PASS Actual rendered pickup and monster pixels appear in the beam
+PASS Unlit pickup leaves zero pixels, even inside the foot halo
+MEASURE partially revealed monster=0.065003
+PASS A monster crossing the beam edge is partially revealed per pixel
+PASS Turning away loses sight of the pickup and monster
+PASS Ordinary threat UI does not leak the unseen monster
+PASS Unseen nearby pickups have no prompt
+PASS Turning away removes all pickup and monster pixels
+PASS The unseen monster still runs its chase logic and keeps its collider
+PASS Bright-region pickup and monster remain observable outside the flashlight cone and range
+PASS Bright-region monster is not suppressed by the old directional threat rule
+PASS Bright-region pickup and monster really render while the flashlight points away
+PASS Monster crossing into brightness becomes visible without turning the flashlight
+PASS Monster returning to darkness is hidden again outside the beam
+PASS Stone occlusion also blocks monster sight
+PASS No monster pixels show through the stone
+PASS Removing the stone occluder exposes the monster
+PASS The monster really renders after the occluder is disabled
+PASS Leaving sorrow restores entity visibility without an explored-object memory
+PASS Entity visibility shader compiles successfully

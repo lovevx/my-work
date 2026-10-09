@@ -1,0 +1,74 @@
+STREET_V3_PLAY_PASS
+PASS One shared pursuing monster
+PASS Only authored anger regions
+PASS No sorrow darkness or vision mechanic
+PASS Inventory references valid
+PASS Neutral center, angry street
+PASS All progression gates begin closed
+PASS Real input reaches (24.50, 47.00)
+PASS Collect and equip anger only
+PASS Real input reaches (21.00, 47.00)
+PASS Real input reaches (21.00, 48.50)
+PASS Real input reaches (17.30, 48.50)
+PASS Real input reaches (13.00, 48.50)
+PASS Wrong elbow orientation stops power at first connector
+PASS Correct first elbow lights only upstream segment
+PASS Real input reaches (13.00, 51.50)
+PASS Connect both elbows to open workshop
+PASS Repeatable circuit controls are not inventory pickups
+PASS Real input reaches (14.50, 51.50)
+PASS Real input reaches (14.50, 34.50)
+PASS Real input reaches (17.40, 34.50)
+PASS Cannot pull exposed street handle from protected alcove
+PASS Real input reaches (19.60, 34.50)
+PASS Repair power comes from manual handle interaction
+PASS Real input reaches (14.50, 34.50)
+PASS Real input reaches (14.50, 22.00)
+PASS Real input reaches (8.50, 22.00)
+PASS Pressure plate physically opens powered shutter
+PASS Anger sprint fails delayed gate and records a retryable experiment
+PASS Real input reaches (8.50, 22.00)
+PASS Real input reaches (8.50, 24.50)
+PASS Wrong elbow branch stops charge at actual wall
+PASS Real input reaches (8.50, 24.50)
+PASS Real input reaches (8.50, 22.00)
+PASS Failed route can return to plate without a reset
+PASS Capture during temporary plate activation uses normal run flow
+PASS Capture resets temporary shutter timer while preserving solved circuit and repair power
+PASS Real input reaches (8.50, 22.00)
+PASS Planning camera shows dead-end elbow, remote latch and stopping wall before committing
+PASS Displayed facing starts upward anger charge
+PASS Anger charge clears timed gate and stops at remote solid wall
+PASS Reach remote latch and hold shutter permanently
+PASS Real input reaches (8.50, 22.00)
+PASS Real input reaches (14.50, 22.00)
+PASS Real input reaches (14.50, 12.50)
+PASS Real input reaches (17.40, 12.50)
+PASS Real input reaches (21.80, 12.50)
+PASS Real input reaches (21.80, 21.50)
+PASS Real input reaches (25.00, 21.50)
+PASS Real input reaches (31.50, 21.50)
+PASS Initial distribution feeds rear room only
+PASS One source switches both real gates
+PASS Distribution can be switched back from public foyer
+PASS Real input reaches (35.00, 21.50)
+PASS Real input reaches (35.00, 10.00)
+PASS Key pickup is distinct from central delivery
+PASS Real input reaches (35.00, 21.50)
+PASS Real input reaches (31.50, 21.50)
+PASS Reconfigure previous mechanism for carrying key home
+PASS Real input reaches (40.50, 21.50)
+PASS Real input reaches (40.50, 47.00)
+PASS Real input reaches (41.00, 47.00)
+PASS Actual return and E delivery contributes 1/5; full gate remains closed
+PASS Monster aims at player instead of a fixed axis
+PASS Moving player cannot steer active monster charge
+PASS Physical wall collision releases monster lock
+PASS After collision monster re-aims at current player
+PASS Opened return route is traversable by pursuing monster too
+PASS Visible one-unit shelter excludes monster body
+PASS Center offers no special immunity
+PASS Capture recovery retains puzzle configuration, permanent gates, key and delivery
+LIMIT: known input route proves feasibility, not unaided player comprehension or the 10-15 minute target.
+PASS Real R scene reload clears all puzzle state, key, equipment and delivery
+PASS R restores all initial progression gates

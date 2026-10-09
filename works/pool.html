@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pool：Unity 2D追逐解谜GameJam项目。李伟翔担任副策划／副程序，负责背包设计、手电改造与街道关卡制作，提供设计说明、实机截图、验证记录与Windows试玩包。">
+<title>Pool · 系统与关卡设计 · 李伟翔作品集</title>
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+.project-links{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.project-media{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:12px;background:var(--bg2)}
+.project-figure{margin:20px 0}
+.project-figure figcaption{color:var(--muted);font-size:13px;margin-top:8px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.gallery .project-figure{margin:0}
+.nav-in{flex-wrap:wrap}
+@media(max-width:600px){.gallery{grid-template-columns:1fr}.nav .run{display:none}.art-head h1{font-size:24px}.project-links .btn{flex:1;justify-content:center}.project-links .btn:first-child{flex-basis:100%}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-in">
+  <span class="brand">Li<span class="dot">·</span>Weixiang</span>
+  <span class="sp"></span>
+  <a class="lnk" href="../">返回总目录</a>
+  <span class="run">在线作品集 · GitHub Pages</span>
+</div></nav>
+<div class="page"><main class="article">
+  <p class="crumb"><a href="../">总目录</a> / Pool</p>
+  <header class="art-head">
+    <span class="badge b-sys">系统 · 关卡 · 可玩原型</span>
+    <h1>Pool · 2D追逐解谜游戏</h1>
+    <p class="art-meta">聚光灯 GameJam · 团队项目 · 副策划／副程序 · Unity 6 · 开发中 · 更新于 2026-10-09</p>
+  </header>
+  <div class="art-body">
+    <div class="callout">
+      <b>在追逐中读懂规则，再利用规则完成解谜。</b>情绪区域改变玩家能力与怪物行为；玩家收集并装备情绪光球，在威胁下操作机关、获取任务物并带回交付。本页展示我设计的背包系统、改造的手电视野，以及正在制作的街道关卡。
+    </div>
+    <div class="project-links">
+      <a class="btn" href="https://github.com/lovevx/my-work/releases/download/pool-street-v3-2026-10-09/Pool_AngerStreetV3_Windows.zip">下载街道 Windows 试玩包</a>
+      <a class="btn ghost" href="#contribution">查看个人分工</a>
+      <a class="btn ghost" href="#documents">设计与验证材料</a>
+    </div>
+    <p class="art-meta">解压整个目录后运行 AngerStreet.exe，无需安装 Unity。试玩包为独立街道白盒：完成街道钥匙交付，贡献大门进度 1/5。背包完整演示、哀区手电和五区框架属于其他演示场景，未整合进这份街道切片。</p>
+    <figure class="project-figure">
+      <img class="project-media" src="../assets/pool/overview.png" width="1280" height="960" alt="Pool街道白盒全图：民居、维修铺、餐馆、商店与中心交付位置">
+      <figcaption>街道v3可编辑白盒全图。正式游玩默认关闭总览，玩家通过场景线索判断机关和路线。</figcaption>
+    </figure>
+
+    <h2 id="contribution">一、个人分工</h2>
+    <p>我在团队中担任<b>副策划／副程序</b>，在既有Unity工程上开展系统设计与原型迭代，主要负责以下内容：</p>
+    <ul>
+      <li><b>背包系统设计：</b>细化光球携带与唯一装备、任务物与电闸分类、融合能力条件、冷却、快览、暂停详情及失败反馈，整理为功能与界面说明，并参与实现对接与验证。</li>
+      <li><b>手电改造：</b>调整黑暗区域的锥形视野、墙体遮光和动态物体显隐；让亮区目标常显，避免玩家处于暗区时，亮区物品和怪物也被手电方向错误隐藏。</li>
+      <li><b>街道关卡制作：</b>围绕既有怒规则，设计关联谜题、空间路线、操作窗口、失败重试与返程流程，推进可编辑白盒和独立试玩版本。</li>
+    </ul>
+
+    <h2>二、背包系统：让携带、装备与使用规则一致</h2>
+    <p>背包需要同时支持实时追逐与信息查看。设计重点是让物品类别、装备状态、能力条件和失败原因在操作与显示上保持一致。</p>
+    <ul>
+      <li><b>分类管理：</b>最多携带4个情绪光球，只装备1个；任务物使用独立格数；电闸保存完成记录，不占携带格。</li>
+      <li><b>能力约束：</b>怒球在怒区触发锁向冲锋，哀球在哀区提供透视；冷却按能力类型共享，换同类光球不能绕过冷却。</li>
+      <li><b>两种查看方式：</b>Tab快览保持世界运行；Esc详情暂停世界并阻断玩法输入。查看详情与实际装备分开处理。</li>
+      <li><b>边界与恢复：</b>拾取校验距离、遮挡、容量及状态；重复收集不重复计数。被捕恢复与完整重开分别定义保留和清空范围。</li>
+    </ul>
+    <p><a href="https://github.com/lovevx/my-work/blob/main/files/pool/inventory-rules.md">背包功能说明 v1.3.1</a> · <a href="https://github.com/lovevx/my-work/blob/main/files/pool/inventory-interface.md">背包界面说明</a></p>
+
+    <h2>三、手电改造：视野限制服务于探索</h2>
+    <p>在哀区演示中，暗处动态物体按手电锥光与墙体遮挡显隐，地形保留可辨认轮廓；亮区中的物品、电闸与怪物保持可见。目标跨越明暗边界时，显示状态随所在位置切换。</p>
+    <figure class="project-figure">
+      <img class="project-media" src="../assets/pool/flashlight.png" width="1280" height="960" loading="lazy" alt="Pool明暗区域演示：暗区手电照明与亮区对象常显">
+      <figcaption>手电v2.1演示场景截图，独立于街道v3。该版本记录了40项照明与显隐检查及19项既有玩法回归检查通过。</figcaption>
+    </figure>
+    <p><a href="https://github.com/lovevx/my-work/blob/main/files/pool/flashlight-design.md">手电改造说明</a> · <a href="../files/pool/flashlight-checks.txt">照明检查记录</a></p>
+
+    <h2>四、街道关卡：4道关联谜题与返程</h2>
+    <p>一个怪物持续追击玩家，起冲后锁定直线，碰墙后重新选择追击方向。玩家利用可观察的行为和机关状态完成目标，机关操作后保留相应进度。</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>谜题</th><th>玩家需要理解的关系</th><th>结果与反馈</th></tr></thead>
+      <tbody>
+        <tr><td>接通维修铺</td><td>旋转两只L形接头，让电源与下游线路相接</td><td>电流只亮到实际断点；接通后维修铺卷帘开启</td></tr>
+        <tr><td>离岗的追击者</td><td>用站位影响怪物下一次起冲方向，再利用锁向窗口接近检修柄</td><td>手动拉柄恢复压板供电；怪物经过不会自动完成机关</td></tr>
+        <tr><td>直线与停点</td><td>比较奔跑与冲锋，选择连续直线和撞停后的安全位置</td><td>通过延时卷帘，撞停恢复后操作保持柄；错误转角可返回重试</td></tr>
+        <tr><td>取物与归途</td><td>同一电源只维持一个输出，取钥匙后回前厅切换归途供电</td><td>门体与路线随供电改变；新路线也对怪物开放，回中心E交付才计入1/5</td></tr>
+      </tbody>
+    </table></div>
+    <div class="gallery">
+      <figure class="project-figure"><img class="project-media" src="../assets/pool/circuit.png" width="1280" height="960" loading="lazy" alt="街道线路谜题：L形接头连接电源与维修铺线路"><figcaption>线路连接：用通电段与断点反馈连接关系。</figcaption></figure>
+      <figure class="project-figure"><img class="project-media" src="../assets/pool/planning.png" width="1280" height="960" loading="lazy" alt="压板附近的观察镜头展示冲锋直线、错误转角和远端保持柄"><figcaption>冲锋前观察：镜头容纳路线、保持柄与撞停位置。</figcaption></figure>
+      <figure class="project-figure"><img class="project-media" src="../assets/pool/distribution.png" width="1280" height="960" loading="lazy" alt="商店前厅配电盘在后屋与归途之间切换供电"><figcaption>供电切换：玩家取物前后的目标改变，同一规则再次使用。</figcaption></figure>
+      <figure class="project-figure"><img class="project-media" src="../assets/pool/delivery.png" width="1280" height="960" loading="lazy" alt="玩家携带街道钥匙回到中心完成1/5交付"><figcaption>返程交付：拿到钥匙后仍需带回中心，街道只贡献1/5进度。</figcaption></figure>
+    </div>
+    <p>失败可重试；被捕后保留已完成的线路、永久开门、供电档位和任务物，临时压板计时复位。连续3次实验失败后可按H查看提示，完整重开清空本关进度。</p>
+
+    <h2>五、交付与验证范围</h2>
+    <ul>
+      <li><b>已交付：</b>Unity可编辑街道场景、独立Windows试玩包、谜题设计卡、功能与路线检查记录、玩家测试表。</li>
+      <li><b>已有自动验证：</b>街道v3的72项功能／输入／物理／重开检查，以及55项怪物全程启用的取物返程检查通过。已知解法路线零被捕。</li>
+      <li><b>开发中：</b>五个地点已有独立场景与连续通行框架，其他区域目标尚未与街道切片整合；不能将五区空间框架写成完整五区游戏。</li>
+      <li><b>待玩家验证：</b>首次10–15分钟体验是设计目标，尚无未读文档玩家测试结果。自动通关只证明流程可完成，不证明谜题可读性、恐怖氛围或最终体验质量。</li>
+    </ul>
+    <p>这些数字来自已保存的原型检查记录。<a href="https://github.com/lovevx/my-work/blob/main/files/pool/street-verification.md">验证说明与复现方式</a> · <a href="../files/pool/checks.txt">72项功能检查</a> · <a href="../files/pool/live-checks.txt">55项持续追击检查</a></p>
+
+    <h2 id="documents">六、设计与验证材料</h2>
+    <ul>
+      <li><a href="../files/pool/Pool_GDD_v0.4.2.docx">项目GDD v0.4.2（Word）</a>：团队项目规则基线，部分机制仍待定；具体演示参数以当前功能说明为准。</li>
+      <li><a href="https://github.com/lovevx/my-work/blob/main/files/pool/inventory-rules.md">背包功能说明</a>与<a href="https://github.com/lovevx/my-work/blob/main/files/pool/inventory-interface.md">界面说明</a>：存放、拾取、装备、能力、暂停与恢复规则。</li>
+      <li><a href="https://github.com/lovevx/my-work/blob/main/files/pool/flashlight-design.md">手电v2.1改造说明</a>：明暗区域、遮挡、显隐与验证范围。</li>
+      <li><a href="https://github.com/lovevx/my-work/blob/main/files/pool/street-design.md">街道v3设计与谜题卡</a>：目标、证据、阻碍、推理、实验、失败反馈和规则迁移。</li>
+      <li><a href="https://github.com/lovevx/my-work/blob/main/files/pool/street-verification.md">街道验证记录</a>与<a href="https://github.com/lovevx/my-work/blob/main/files/pool/player-test-sheet.md">陌生玩家测试表</a>：区分流程可完成性与玩家理解验证。</li>
+    </ul>
+    <div class="project-links">
+      <a class="btn" href="https://github.com/lovevx/my-work/releases/download/pool-street-v3-2026-10-09/Pool_AngerStreetV3_Windows.zip">下载街道试玩包</a>
+      <a class="btn ghost" href="../">返回作品总目录</a>
+    </div>
+  </div>
+</main><footer><p>李伟翔 · 游戏策划作品集 ｜ Pool团队项目，副策划／副程序 ｜ 当前展示为开发中的系统演示与街道白盒</p></footer></div>
+</body>
+</html>

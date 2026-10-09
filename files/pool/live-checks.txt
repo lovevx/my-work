@@ -1,0 +1,57 @@
+STREET_V3_PLAY_PASS
+PASS One shared pursuing monster
+PASS Only authored anger regions
+PASS No sorrow darkness or vision mechanic
+PASS Inventory references valid
+PASS Neutral center, angry street
+PASS All progression gates begin closed
+PASS Real input reaches (24.50, 47.00)
+PASS Collect and equip anger only
+PASS Real input reaches (21.00, 47.00)
+PASS Real input reaches (21.00, 48.50)
+PASS Real input reaches (17.30, 48.50)
+PASS Real input reaches (13.00, 48.50)
+PASS Wrong elbow orientation stops power at first connector
+PASS Correct first elbow lights only upstream segment
+PASS Real input reaches (13.00, 51.50)
+PASS Connect both elbows to open workshop
+PASS Repeatable circuit controls are not inventory pickups
+PASS Real input reaches (14.50, 51.50)
+PASS Real input reaches (14.50, 34.50)
+PASS Real input reaches (17.45, 34.50)
+PASS Observe monster charging away before approaching handle
+PASS Real input reaches (19.60, 34.50)
+PASS Manually power repair while monster is active
+PASS Real input reaches (17.40, 34.50)
+PASS Real input reaches (14.50, 34.50)
+PASS Real input reaches (14.50, 22.00)
+PASS Real input reaches (8.50, 22.00)
+PASS Real input reaches (8.50, 22.00)
+PASS Planning camera shows dead-end elbow, remote latch and stopping wall before committing
+PASS Displayed facing starts upward anger charge
+PASS Anger charge clears timed gate and stops at remote solid wall
+PASS Reach remote latch and hold shutter permanently
+PASS Real input reaches (8.50, 22.00)
+PASS Real input reaches (14.50, 22.00)
+PASS Real input reaches (14.50, 12.50)
+PASS Real input reaches (17.40, 12.50)
+PASS Restaurant shelter offers northbound departure window
+PASS Real input reaches (21.80, 12.50)
+PASS Real input reaches (21.80, 21.50)
+PASS Real input reaches (25.00, 21.50)
+PASS Real input reaches (31.50, 21.50)
+PASS Initial distribution feeds rear room only
+PASS One source switches both real gates
+PASS Distribution can be switched back from public foyer
+PASS Real input reaches (35.00, 21.50)
+PASS Real input reaches (35.00, 10.00)
+PASS Key pickup is distinct from central delivery
+PASS Real input reaches (35.00, 21.50)
+PASS Real input reaches (31.50, 21.50)
+PASS Reconfigure previous mechanism for carrying key home
+PASS Real input reaches (40.50, 21.50)
+PASS Real input reaches (40.50, 47.00)
+PASS Real input reaches (41.00, 47.00)
+PASS Actual return and E delivery contributes 1/5; full gate remains closed
+PASS Full four-puzzle retrieve-return-deliver route; monster always active; zero captures
+LIMIT: known input route proves feasibility, not unaided player comprehension or the 10-15 minute target.

@@ -11,8 +11,9 @@
 
 | 作品 | 简介 | 在线阅读 |
 | --- | --- | --- |
-| 探洞先锋 · GDD | 从 0 到 1 从核心循环到结算全链路的主策划设计文档 | [在线阅读](https://lovevx.github.io/my-work/works/tan-dong-xian-feng.html) |
 | Boomame · 独立 2D 游戏 | 破坏→收益→自动化；当前美术、数值、实机视频与下落修复（2026-10-09） | [项目页](https://lovevx.github.io/my-work/works/boomame.html) |
+| Pool · Unity追逐解谜原型 | 副策划／副程序；背包设计、手电改造与街道4道谜题，含试玩与验证材料 | [项目页](https://lovevx.github.io/my-work/works/pool.html) |
+| 探洞先锋 · GDD | 从 0 到 1 从核心循环到结算全链路的主策划设计文档 | [在线阅读](https://lovevx.github.io/my-work/works/tan-dong-xian-feng.html) |
 | 空之轨迹1st · 战斗与养成拆解 | 经典 JRPG 系统拆解 + 面向移动端可迁移思路 | [在线阅读](https://lovevx.github.io/my-work/works/kongzhigui-1st.html) |
 | 鸣潮商城系统 | 商业化系统 + 可读配表（xlsx 落地成品） | [在线阅读](https://lovevx.github.io/my-work/works/mingchao-mall.html) |
 | 王者数值建模 · 作品摘要 | MOBA 装备铭文伤害仿真，方法论 + 量化结论 | [在线阅读](https://lovevx.github.io/my-work/works/wangzhe-numerics.html) |
@@ -25,6 +26,7 @@ Boomame 当前源码与参数见 [游戏仓库](https://github.com/lovevx/boom)�
 
 | 作品 | 文件 |
 | --- | --- |
+| Pool · 系统与关卡 | [背包功能说明](https://github.com/lovevx/my-work/blob/main/files/pool/inventory-rules.md) · [街道谜题卡](https://github.com/lovevx/my-work/blob/main/files/pool/street-design.md) · [验证记录](https://github.com/lovevx/my-work/blob/main/files/pool/street-verification.md) |
 | 探洞先锋 · GDD | [探洞先锋游戏设计文档.docx](files/探洞先锋游戏设计文档.docx) |
 | Boomame · 设计文档 | [Boomame_游戏设计文档_GDD.docx](files/Boomame_游戏设计文档_GDD.docx) |
 | Boomame · AI 协作文档 | [Boomame_AI协作文档.docx](files/Boomame_AI协作文档.docx) |
@@ -39,6 +41,7 @@ Boomame 当前源码与参数见 [游戏仓库](https://github.com/lovevx/boom)�
 | 游戏 | 下载 | 大小 |
 | --- | --- | --- |
 | Boomame · 2026-10-09 | [Boomame_Windows.zip（解压后运行，无需 Godot）](https://github.com/lovevx/boom/releases/download/snapshot-2026-10-09/Boomame_Windows.zip) | 以 Release 标注为准 |
+| Pool · 街道v3白盒 | [Pool_AngerStreetV3_Windows.zip（解压后运行）](https://github.com/lovevx/my-work/releases/download/pool-street-v3-2026-10-09/Pool_AngerStreetV3_Windows.zip) | 以 Release 标注为准 |
 | 勇者传说 Windows 版 | [YongZhe_Windows.zip（解压即玩）](https://github.com/lovevx/my-work/releases/download/demo-builds/YongZhe_Windows.zip) | 约 42MB |
 
 ## 演示视频
