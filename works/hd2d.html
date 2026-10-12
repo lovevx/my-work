@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HD-2D 动作 RPG 个人原型。李伟翔全程负责，AI 辅助开发；展示任务与成长循环、森林风险收益、关卡通路修正及近战迭代，附 STAR 案例与实机截图。">
+<title>HD-2D 动作 RPG · 执行与系统策划 · 李伟翔作品集</title>
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+.project-links{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.project-media{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:12px;background:var(--bg2)}
+.project-figure{margin:22px 0}.project-figure figcaption{color:var(--muted);font-size:13px;margin-top:8px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:20px}.gallery .project-figure{margin:0}
+.section-nav{display:flex;gap:8px 18px;flex-wrap:wrap;font-size:14px;margin:20px 0;padding:14px 0;border-block:1px solid var(--rule)}
+.star-label{color:var(--accent);font-weight:700}.nav-in{flex-wrap:wrap}
+h2,h3{scroll-margin-top:80px}.table-wrap{max-width:100%;overflow-x:auto}
+@media(max-width:600px){.gallery{grid-template-columns:1fr}.nav .run{display:none}.art-head h1{font-size:25px}.project-links .btn{flex:1;justify-content:center}.project-links .btn:first-child{flex-basis:100%}.page{padding-inline:18px}.nav-in{padding-inline:18px}.section-nav{font-size:13px}}
+@media print{.nav,.project-links,.section-nav{display:none}body{background:#fff;color:#000}.page{padding:0;max-width:none}.page::before{display:none}.art-body p,.art-body li,.art-meta{color:#000}.project-media{break-inside:avoid}h2,h3{break-after:avoid}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-in"><span class="brand">Li<span class="dot">·</span>Weixiang</span><span class="sp"></span><a class="lnk" href="../">返回总目录</a><span class="run">在线作品集 · GitHub Pages</span></div></nav>
+<div class="page"><main class="article">
+<p class="crumb"><a href="../">总目录</a> / HD-2D 动作 RPG</p>
+<header class="art-head">
+<span class="badge b-sys">系统设计 · 关卡执行 · 可玩原型</span>
+<h1>HD-2D 动作 RPG 个人原型</h1>
+<p class="art-meta">个人全程负责 · AI 辅助开发与资源制作 · Godot · 原著题材练习项目 · 更新于 2026-10-13</p>
+</header>
+<div class="art-body">
+<p>围绕<b>探索、战斗、收益结算与永久成长</b>完成可玩的动作 RPG 序章。作品重点是把规则拆成任务条件、状态、资源与奖励，再落实到关卡、界面和可验证的原型。</p>
+<div class="project-links">
+<a class="btn" href="../files/hd2d/01_项目展示稿.pdf">阅读六页作品展示 PDF</a>
+<a class="btn ghost" href="#star">查看三个 STAR 案例</a>
+<a class="btn ghost" href="../files/hd2d/HD2D_策划展示包_20261013.zip" download>下载完整展示材料</a>
+</div>
+<figure class="project-figure"><img class="project-media" src="../assets/hd2d/forest.png" width="1280" height="720" alt="森林实际游戏画面，包含台地、路线、敌人预警、任务提示及战斗快捷栏"><figcaption>实机捕获：森林探索与空间遭遇，2026-10-04。截图保留当时的测试状态。</figcaption></figure>
+<nav class="section-nav" aria-label="本页目录"><a href="#role">个人职责</a><a href="#system">系统循环</a><a href="#star">STAR 案例</a><a href="#evidence">验证与范围</a><a href="#documents">文档下载</a></nav>
+
+<h2 id="role">个人职责与项目范围</h2>
+<p>我全程负责玩法与系统设计、数值配置、关卡搭建、功能整合和迭代验证，AI 全程辅助代码实现、资源制作与文档整理。面向执行策划与系统策划，主要展示规则拆解、数据配置、流程衔接和异常分支处理。</p>
+<p>当前采用 2D 角色与 3D 场景，已接入五段序章、森林履约、可选巨虎挑战、装备与属性成长、港口整备及检查点重试。后续主线尚未开放；序章完成后，重复挑战由玩家主动选择。</p>
+
+<h2 id="system">任务与成长如何形成循环</h2>
+<p><b>探索与接敌 → 战斗消耗 → 完成履约 → 撤离或追猎 → 整理战利品 → 回港成长。</b>系统设计围绕每一步的进入条件、结果状态和收益归属展开。</p>
+<div class="table-wrap"><table><thead><tr><th>环节</th><th>已落地规则</th><th>设计意图</th></tr></thead><tbody>
+<tr><td>基础履约</td><td>回收林场补给，保存 3.2% 世界之源</td><td>为基础目标提供明确终点</td></tr>
+<tr><td>可选追猎</td><td>保留剩余生命、法力、补给与耐久进入巨虎挑战</td><td>让前段消耗影响后续选择</td></tr>
+<tr><td>额外收益</td><td>真实击杀才发绿箱、虎齿与 15 点永久法力</td><td>区分履约、撤离和真实击杀</td></tr>
+<tr><td>结算成长</td><td>整理本土物品，预览属性、强化和刀术效果</td><td>让物品处置与成长变化可见</td></tr>
+<tr><td>状态保护</td><td>奖励防重、检查点重试、未提交部分回滚</td><td>保持任务与收益一致</td></tr>
+</tbody></table></div>
+<div class="gallery">
+<figure class="project-figure"><img class="project-media" src="../assets/hd2d/settlement.png" width="1280" height="720" loading="lazy" alt="回港前整理战利品界面，提供吞噬、分解、出售和确认结算"><figcaption>回港前明确物品处置与结算结果。</figcaption></figure>
+<figure class="project-figure"><img class="project-media" src="../assets/hd2d/growth.png" width="1280" height="720" loading="lazy" alt="工坊成长界面，展示力量加点前后的攻击区间预览"><figcaption>操作前显示属性成长与攻击变化。两图捕获于 2026-10-04。</figcaption></figure>
+</div>
+
+<h2 id="star">三个 STAR 迭代案例</h2>
+<h3>一 森林风险收益与系统衔接</h3>
+<p><span class="star-label">S 情境</span>　已有序章将技能练习、森林履约与巨虎挑战绑得较紧；猎场自动恢复资源，弱化了前后阶段的消耗关系。</p>
+<p><span class="star-label">T 任务</span>　在现有五段范围内完成可结束并可回港成长的序章，明确基础目标与额外挑战各自的条件和收益。</p>
+<p><span class="star-label">A 行动</span>　将技能教学改为可选提示，分别记录履约与真实击杀。履约后保存基础收益，允许撤离或带剩余资源追猎；真实击杀后才发额外奖励。同时加入奖励防重、结算前物品整理和成长预览，使用 AI 辅助实现并核对异常路径。</p>
+<p><span class="star-label">R 结果</span>　基础履约、可选追猎、物品整理与永久成长已经串联。本轮序章规则检查零失败，覆盖提前撤离、诈死撤离、真实击杀、重复领奖和试玩档隔离。玩家选择比例与体验改善仍待真人测试。</p>
+
+<h3>二 关卡通路与推进条件修正</h3>
+<p><span class="star-label">S 情境</span>　森林改为空间遭遇后，实际通路检查发现旧西台地与北出口卡路；地图视觉、碰撞和导航存在不一致。</p>
+<p><span class="star-label">T 任务</span>　保留已有台地与建筑，使中央路线、西侧坡道及补给后的追猎出口均可实际到达。</p>
+<p><span class="star-label">A 行动</span>　补充西侧通路，将追猎入口放到北侧可通行地面，保留可调整的入口、出口及刷怪标记。沿导航路径驱动角色做碰撞移动，并检测停滞；不以直接传送代替通路验收。</p>
+<p><span class="star-label">R 结果</span>　本轮森林通路检查零失败，覆盖两条路线及补给点到追猎入口。该结果证明实际可达，新玩家的路线辨识与迷路情况仍需观察。</p>
+
+<h3>三 三段连招与近战动作迭代</h3>
+<p><span class="star-label">S 情境</span>　近战需要兼顾连续输入、接敌距离与防御选择，避免单次攻击转向漂移或穿过障碍。</p>
+<p><span class="star-label">T 任务</span>　将动作体验目标拆成可配置的时序和衔接规则，使完整连招与转入技能各有取舍。</p>
+<p><span class="star-label">A 行动</span>　确定斜斩、突刺、重斩三段结构；配置 0.15 秒输入缓冲，前两段命中后开放 0.18 秒取消窗口，第三段保留恢复。普攻在 0.10 至 0.22 秒沿起手方向前移 0.3 米，并经过碰撞检测。AI 辅助代码实现，我负责规则确定与验收。</p>
+<p><span class="star-label">R 结果</span>　本轮连招与即时动作时序检查零失败；攻击前移参数经源码核对，专项距离与碰撞测量未重跑。最终手感和难度仍需玩家反馈。</p>
+<figure class="project-figure"><img class="project-media" src="../assets/hd2d/boss-clash.png" width="1280" height="720" loading="lazy" alt="玩家正面对巨虎爪击进行拼刀，画面显示拼刀反馈"><figcaption>实机捕获：巨虎爪击拼刀反馈，2026-09-30。用于展示动作反馈，不作为攻击前移距离的测量证据。</figcaption></figure>
+
+<h2 id="evidence">验证结果与当前范围</h2>
+<ul>
+<li><b>历史工程记录：</b>2026-10-04 记录 17 组检查通过；连续渲染巡检 1831.7 秒，约 30.5 分钟、53 轮场景与菜单循环，记录中未发现脚本异常或崩溃。</li>
+<li><b>2026-10-13 针对性复核：</b>连招、序章、存档事务、森林通路与即时动作时序五项检查均退出码 0，并输出对应零失败标记。</li>
+<li><b>日志边界：</b>部分检查退出时有 ObjectDB 与资源清理告警；存档检查包含主动构造坏档的解析报错与备份回退。不能把断言通过写成“零报错”或“无内存泄漏”。</li>
+<li><b>体验边界：</b>陌生玩家理解、20～30 分钟实玩节奏、难度与乐趣、实物手柄及当前正式发行包尚未验收。历史加载尖峰不能作为“稳定 60 FPS”的证据。</li>
+</ul>
+<p>八张截图来自已有工程捕获；90 秒实机视频目前只有演示脚本，尚未录制。本页提供展示材料，不把旧验证包标为当前发行版。</p>
+
+<h2 id="documents">文档与完整材料</h2>
+<ul>
+<li><a href="../files/hd2d/01_项目展示稿.pdf">六页项目展示 PDF</a> · <a href="../files/hd2d/01_项目展示稿.docx">Word 可编辑版</a></li>
+<li><a href="https://github.com/lovevx/my-work/blob/main/files/hd2d/02_STAR简历与面试稿.md">执行策划与系统策划两版简历文案、完整 STAR 及面试问答</a></li>
+<li><a href="https://github.com/lovevx/my-work/blob/main/files/hd2d/03_90秒实机演示脚本.md">90 秒实机演示顺序与配音稿</a></li>
+<li><a href="https://github.com/lovevx/my-work/blob/main/files/hd2d/04_成果证据.md">成果证据与表述边界</a> · <a href="https://github.com/lovevx/my-work/tree/main/files/hd2d/evidence_logs">本轮原始检查日志</a></li>
+<li><a href="../files/hd2d/HD2D_策划展示包_20261013.zip" download>下载完整展示包</a> · <a href="https://github.com/lovevx/my-work/tree/main/assets/hd2d">八张实机截图</a></li>
+</ul>
+<p>开发周期按实际投入填写，文档日期不直接等于个人开发周期。作品属于原著题材练习，未将 AI 辅助代码与美术表述为全部手工原创。</p>
+</div></main><footer><p>李伟翔 · 游戏策划作品集 ｜ HD-2D 动作 RPG 个人原型 ｜ 更新于 2026-10-13</p></footer></div>
+</body>
+</html>

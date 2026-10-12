@@ -1,0 +1,109 @@
+{
+  "prepared_on": "2026-10-13",
+  "personal_role_source": "用户于 2026-10-13 确认：全程本人负责，AI 全程辅助。",
+  "sources": [
+    {
+      "path": "docs/RPG_PROLOGUE_IMPLEMENTATION_20261004.md",
+      "sha256": "8ce686acca8e49b23f753816608a141d3a290228b3c6a06e987eece35d500c82"
+    },
+    {
+      "path": "docs/RPG_PROLOGUE_VERIFICATION_20261004.md",
+      "sha256": "6cfc19587bd6c1142af6d331fad6e7f05ba9b1ff4ea8c404012223b9277c712e"
+    },
+    {
+      "path": "docs/CORE_LOOP_PLAYTEST.md",
+      "sha256": "24124d99072a98c24d53d2a707410c3a2ce513d0e6456205abe3f48618657480"
+    },
+    {
+      "path": "docs/REALTIME_COMBAT_EXTRACTION.md",
+      "sha256": "80bdfadab9bbb1a99ec4bce3e968b750f403403e7f598466a47890a36a8f23d0"
+    },
+    {
+      "path": "player.gd",
+      "sha256": "5309c176a26f4086e01cd63d4610c1d485b255af857e905dd5b1c660b59ad6f7"
+    },
+    {
+      "path": "data/combat_skills.gd",
+      "sha256": "d7d9d5280b84f7c82362e0718c407fbe39e3fd3792dbf6e4ccc5ea2bfc96352c"
+    },
+    {
+      "path": "autoload/game_state.gd",
+      "sha256": "f1836c0c2f9563ff52a74ee6892be6fd1fb988a1668fc614f5c0df7d32ab2d23"
+    },
+    {
+      "path": "tools/validate_combo_skills.gd",
+      "sha256": "ddcc7d224aa3f4ecdcb076309ac6ccf145734e142dd1bb23e52073525b5359e2"
+    },
+    {
+      "path": "tools/validate_prologue_rpg.gd",
+      "sha256": "a39b6863cb8f5671682714d8b0b4fa85db2f5718db3efade4956e85b1e37e59a"
+    },
+    {
+      "path": "tools/validate_save_transaction.gd",
+      "sha256": "b02c4f55a2b4a2f9b316b34604950ccf37c65027228aa00b79f19e3eb4335b4d"
+    },
+    {
+      "path": "tools/validate_forest_routes.gd",
+      "sha256": "b9a922f0f7ecf1d572d608ab4f4ce7cf48d37d3b14080f3a4f8094ebf28e77fb"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "../../assets/hd2d/forest.png",
+      "source": ".tmp_preview/rpg_capture/forest_route_720p.png",
+      "description": "森林探索与空间路线",
+      "capture_record_date": "2026-10-04",
+      "sha256": "cebeabf5161fa2b4624fe2bb3710ac741dad575a520c81935285b3394100a2fb"
+    },
+    {
+      "file": "../../assets/hd2d/boss-clash.png",
+      "source": ".tmp_preview/combat_polish/720p/boss_claw_clash.png",
+      "description": "巨虎爪击拼刀反馈",
+      "capture_record_date": "2026-09-30",
+      "sha256": "db7bda7347f74716b55bff9f2dd1564c9a7a25d29f678399765c16f76fa9ce4b"
+    },
+    {
+      "file": "../../assets/hd2d/growth.png",
+      "source": ".tmp_preview/rpg_capture/growth150_720p.png",
+      "description": "属性与刀术成长预览",
+      "capture_record_date": "2026-10-04",
+      "sha256": "a6233856cb4b808b7484cccf26d97aa20569748cd32722fdf5840a6896245472"
+    },
+    {
+      "file": "../../assets/hd2d/inventory.png",
+      "source": ".tmp_preview/rpg_capture/character150_720p.png",
+      "description": "角色属性与装备背包",
+      "capture_record_date": "2026-10-04",
+      "sha256": "ce68921cc6967a962b4592841b01a2a6befb88fdc65c7ec68a8ff3a54748dd3a"
+    },
+    {
+      "file": "../../assets/hd2d/harbor.png",
+      "source": "docs/steam_quality_20261004/harbor.png",
+      "description": "港口整备场景",
+      "capture_record_date": "2026-10-04",
+      "sha256": "ecc983f000624c28cc7315e097476254486a3f49abb76c5d1945dce2d438f090"
+    },
+    {
+      "file": "../../assets/hd2d/settlement.png",
+      "source": ".tmp_preview/rpg_capture/cleanup150_720p.png",
+      "description": "结算前战利品整理",
+      "capture_record_date": "2026-10-04",
+      "sha256": "d7b078ef8a8f94943470c962e3f9ae2ba1d818bf5aee7308853c3335a62c50be"
+    },
+    {
+      "file": "../../assets/hd2d/encounter.png",
+      "source": ".tmp_preview/rpg_capture/region_3_720p.png",
+      "description": "欢乐街关卡遭遇",
+      "capture_record_date": "2026-10-04",
+      "sha256": "28a42db8e197cafdb4d027102f5346335853797de18c010b77d14cc2c9e90ca5"
+    },
+    {
+      "file": "../../assets/hd2d/combo.png",
+      "source": ".tmp_preview/combat_polish/720p/practice_combo_3.png",
+      "description": "第三段重斩动作",
+      "capture_record_date": "2026-09-30",
+      "sha256": "e22d63f254f168c68e8d3f893c8a2278af1142f4764fe5b42dc583e15d1dfa12"
+    }
+  ],
+  "source_note": "工程来源指向 2026-10-13 本地快照；不宣称公开源码仓库与该快照完全一致。"
+}

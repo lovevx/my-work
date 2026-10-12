@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-13",
+  "engine": "Godot 4.7.2 Steam",
+  "mode": "headless",
+  "full_historical_suite_rerun": false,
+  "tests": [
+    {
+      "script": "tools/validate_combo_skills.gd",
+      "result": "COMBO_SKILLS_FAILURES=0",
+      "exit_code": 0,
+      "scope": "连招、资源消耗与第三段恢复",
+      "stdout": "evidence_logs/combo_stdout.txt",
+      "stderr": "evidence_logs/combo_stderr.txt"
+    },
+    {
+      "script": "tools/validate_prologue_rpg.gd",
+      "result": "PROLOGUE_RPG_FAILURES=0",
+      "exit_code": 0,
+      "scope": "序章推进、奖励防重、旧档与试玩档隔离",
+      "stdout": "evidence_logs/prologue_stdout.txt",
+      "stderr": "evidence_logs/prologue_stderr.txt"
+    },
+    {
+      "script": "tools/validate_save_transaction.gd",
+      "result": "SAVE_TRANSACTION_FAILURES=0",
+      "exit_code": 0,
+      "scope": "未提交改动回滚、存档替换与坏档回退",
+      "stdout": "evidence_logs/save_stdout.txt",
+      "stderr": "evidence_logs/save_stderr.txt"
+    },
+    {
+      "script": "tools/validate_forest_routes.gd",
+      "result": "FOREST_ROUTE_FAILURES=0",
+      "exit_code": 0,
+      "scope": "森林两条路线与追猎出口的碰撞运动",
+      "stdout": "evidence_logs/routes_stdout.txt",
+      "stderr": "evidence_logs/routes_stderr.txt"
+    },
+    {
+      "script": "tools/validate_realtime_feel.gd",
+      "result": "REALTIME_FEEL_FAILURES=0",
+      "exit_code": 0,
+      "scope": "直踹有效帧、单次伤害、命中取消与动作切换",
+      "stdout": "evidence_logs/feel_stdout.txt",
+      "stderr": "evidence_logs/feel_stderr.txt"
+    }
+  ]
+}

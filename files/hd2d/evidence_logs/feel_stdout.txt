@@ -1,0 +1,12 @@
+Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org
+
+PASS 直踹起手先播动作，不提前命中
+PASS 有效帧前不可剃取消
+PASS 有效帧结算伤害并显示命中反馈
+PASS 命中后可用剃取消直踹后摇
+PASS 取消后立刻切到剃动画
+PASS 直踹每次只结算一次伤害
+PASS 连段第一段播放斜斩动画
+PASS 斜斩命中前不可剃取消
+PASS 第一段命中后 0.18 秒内可剃取消
+REALTIME_FEEL_FAILURES=0

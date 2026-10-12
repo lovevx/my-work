@@ -1,0 +1,11 @@
+Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org
+
+PASS route waypoint (0.0, 0.0, 9.0)
+PASS route waypoint (3.0, 0.0, -7.0)
+[前景遮挡] 这类材质还没有淡出版本，先不处理：res://assets/environments/jungle/forest_floor.gdshader
+PASS route waypoint (-11.0, 0.0, -10.0)
+PASS route waypoint (-11.0, 0.0, 1.0)
+PASS route waypoint (-11.0, 0.0, -7.0)
+PASS route waypoint (-11.0, 0.0, -10.0)
+PASS northern portal reachable from supplies
+FOREST_ROUTE_FAILURES=0

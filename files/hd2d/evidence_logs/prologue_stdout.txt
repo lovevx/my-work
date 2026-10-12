@@ -1,0 +1,70 @@
+Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org
+
+PASS independent region scene 0
+PASS unique exit layout 0
+PASS region objective offers loot 0
+PASS unused optional skills do not block region 0
+PASS region rewards cannot be claimed twice 0
+PASS story progression 0
+PASS independent region scene 1
+PASS unique exit layout 1
+PASS Carlos bait attack profile
+PASS region objective offers loot 1
+PASS letter chest independent of gun exercise
+PASS unused optional skills do not block region 1
+PASS region rewards cannot be claimed twice 1
+PASS story progression 1
+PASS independent region scene 2
+PASS unique exit layout 2
+PASS instructor counter profile
+PASS consecutive hits trigger readable instructor counter
+PASS region objective offers loot 2
+PASS unused optional skills do not block region 2
+PASS region rewards cannot be claimed twice 2
+PASS story progression 2
+PASS independent region scene 3
+PASS unique exit layout 3
+PASS Oka objective completes while optional guard lives
+PASS region objective offers loot 3
+PASS unused optional skills do not block region 3
+PASS region rewards cannot be claimed twice 3
+PASS story progression 3
+PASS pre-forest source unchanged
+PASS forest has two wolves, one boar and optional golem
+PASS supply objective cannot bypass wolf encounter
+PASS spatial supply interaction completes contract
+PASS forest commits 3.2 source before optional hunt
+PASS forest reward is idempotent
+PASS basic contract does not award tiger kill
+PASS cleanup shown before normal extraction
+PASS local weapon can be consumed before cleanup
+PASS early extraction settles without claiming tiger
+PASS RPG growth and explicit prologue completion
+PASS settlement remains idempotent
+PASS replay is explicitly optional
+PASS first story weapon does not duplicate on replay
+PASS spatial supply interaction completes contract
+PASS forest checkpoint survives reload
+PASS death loses uncommitted loot and retains basic contract
+[前景遮挡] 这类材质还没有淡出版本，先不处理：res://assets/environments/jungle/forest_floor.gdshader
+PASS optional hunt carries remaining health
+PASS timed prep spawns tiger without skill checklist
+PASS fake death extraction cannot manufacture kill
+PASS fake death extraction has no tiger reward
+PASS spatial supply interaction completes contract
+[前景遮挡] 这类材质还没有淡出版本，先不处理：res://assets/environments/jungle/forest_floor.gdshader
+PASS true tiger death creates claimable reward
+PASS only true kill grants chest and permanent mana
+PASS tiger does not double award forest source
+PASS true kill survives reload without duplicate payout
+PASS attribute preview matches damaged weapon panel values
+PASS attribute preview matches unequipped weapon panel values
+PASS 150 percent text scaling updates existing controls
+PASS text scaling persists in isolated preferences
+PASS legacy outer checkpoint migrates to completed forest contract
+PASS migrated source does not duplicate on next load
+PASS forest demo starts at harbor with separate progress
+PASS forest demo never overwrites normal progress
+PASS forest demo replay stays in forest instead of restarting all five regions
+PASS return from demo restores main save even after double click
+PROLOGUE_RPG_FAILURES=0

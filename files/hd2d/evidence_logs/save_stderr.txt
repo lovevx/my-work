@@ -1,0 +1,41 @@
+ERROR: ConfigFile parse error at user://save_transaction_validation.cfg:3: Expected value, got 'EOF'.
+   at: _parse (core/io/config_file.cpp:293)
+   GDScript backtrace (most recent call first):
+       [0] _is_valid_save (res://autoload/game_state.gd:182)
+       [1] run (res://tools/validate_save_transaction.gd:152)
+ERROR: ConfigFile parse error at user://save_transaction_validation.cfg:3: Expected value, got 'EOF'.
+   at: _parse (core/io/config_file.cpp:293)
+   GDScript backtrace (most recent call first):
+       [0] _load_from (res://autoload/game_state.gd:196)
+       [1] load_game (res://autoload/game_state.gd:188)
+       [2] run (res://tools/validate_save_transaction.gd:155)
+WARNING: 存档不可用，回退备份：user://save_transaction_validation.cfg
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] _load_from (res://autoload/game_state.gd:198)
+       [1] load_game (res://autoload/game_state.gd:188)
+       [2] run (res://tools/validate_save_transaction.gd:155)
+ERROR: ConfigFile parse error at user://save_transaction_validation.cfg:3: Expected value, got 'EOF'.
+   at: _parse (core/io/config_file.cpp:293)
+   GDScript backtrace (most recent call first):
+       [0] _is_valid_save (res://autoload/game_state.gd:182)
+       [1] save_game (res://autoload/game_state.gd:172)
+       [2] run (res://tools/validate_save_transaction.gd:158)
+WARNING: 存档不可用，回退备份：user://save_transaction_validation.cfg
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] _load_from (res://autoload/game_state.gd:198)
+       [1] load_game (res://autoload/game_state.gd:188)
+       [2] run (res://tools/validate_save_transaction.gd:155)
+WARNING: 存档不可用，回退备份：user://save_transaction_validation.cfg
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] _load_from (res://autoload/game_state.gd:198)
+       [1] load_game (res://autoload/game_state.gd:188)
+       [2] run (res://tools/validate_save_transaction.gd:155)
+WARNING: 存档不可用，回退备份：user://save_transaction_validation.cfg
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] _load_from (res://autoload/game_state.gd:198)
+       [1] load_game (res://autoload/game_state.gd:188)
+       [2] run (res://tools/validate_save_transaction.gd:155)
