@@ -61,4 +61,4 @@
 ## 其他可体验作品
 
 - **勇者传说**。Godot 横版动作冒险，包含连击、滑铲、场景探索与首领战。[Windows 试玩](https://github.com/lovevx/my-work/releases/download/demo-builds/YongZhe_Windows.zip) · [实机视频](videos/勇者之路.mp4) · [源码](https://github.com/lovevx/Brave-person)
-- **潮汐声律终端**。Windows 音乐播放器。我负责需求和交互取舍，用 AI 辅助实现和测试。先浏览歌单、选曲后再切换队列，找歌时可以继续播放当前曲目。[免登录演示下载](https://github.com/lovevx/resonance-terminal/releases/tag/v1.11.0) · [源码与截图](https://github.com/lovevx/resonance-terminal)
+- **潮汐声律终端**。Windows 音乐播放器。我负责需求和交互取舍，用 AI 辅助实现和测试。先浏览歌单、选曲后再切换队列，找歌时可以继续播放当前曲目。[Windows 鸣潮主题版下载](https://github.com/lovevx/resonance-terminal/releases/tag/v1.11.0-original) · [源码与实机截图](https://github.com/lovevx/resonance-terminal)
